@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Apps No Ads">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#3a1f8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <g stroke="rgba(255,255,255,.85)" stroke-width="2">
+    <rect x="14" y="14" width="36" height="36" rx="3" fill="none"/>
+    <line x1="26" y1="14" x2="26" y2="50"/>
+    <line x1="38" y1="14" x2="38" y2="50"/>
+    <line x1="14" y1="26" x2="50" y2="26"/>
+    <line x1="14" y1="38" x2="50" y2="38"/>
+  </g>
+  <text x="20" y="24.5" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+  <text x="44" y="48.5" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#f5a623" text-anchor="middle">3</text>
+  <text x="32" y="36.5" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">7</text>
+</svg>
