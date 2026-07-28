@@ -4,3 +4,6 @@ Thumbs.db
 Desktop.ini
 *.tmp
 *~
+
+# Local dev instructions for Claude — kept out of the published site
+CLAUDE.md
