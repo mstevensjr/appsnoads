@@ -77,12 +77,13 @@ img { max-width: 100%; display: block; }
   backdrop-filter: saturate(160%) blur(12px);
   border-bottom: 1px solid var(--line);
 }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.nav { display: flex; align-items: center; height: 68px; gap: 1rem; }
+.nav-actions { display: flex; align-items: center; gap: .6rem; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 800; color: var(--ink); font-size: 1.15rem; letter-spacing: -.02em; }
 .brand:hover { text-decoration: none; }
 .brand svg { width: 34px; height: 34px; }
 .brand-accent { color: var(--amber-dark); }
-.nav-links { display: flex; align-items: center; gap: 1.6rem; }
+.nav-links { display: flex; align-items: center; gap: 1.6rem; margin-left: auto; }
 .nav-links a { color: var(--ink); font-weight: 600; font-size: .98rem; }
 .nav-links a:hover { color: var(--violet); text-decoration: none; }
 .nav-toggle, .nav-toggle-label { display: none; }
@@ -242,8 +243,9 @@ img { max-width: 100%; display: block; }
     flex-direction: column; align-items: stretch; gap: 0;
     background: #fff; border-bottom: 1px solid var(--line);
     padding: 8px 16px 16px; box-shadow: var(--shadow);
-    display: none;
+    display: none; margin-left: 0;
   }
+  .nav-actions { margin-left: auto; } /* keep Donate + hamburger on the bar */
   .nav-links a { padding: 12px 6px; border-bottom: 1px solid var(--line); }
   .nav-links a:last-child { border-bottom: 0; }
   .nav-toggle:checked ~ .nav-links { display: flex; }
