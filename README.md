@@ -7,8 +7,8 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home / landing page (hero, philosophy, Simple Sudoku, screenshot gallery, download, donate). |
-| `simple-sudoku.html` | Product page for Simple Sudoku — feature tour with screenshots, download, donate. |
+| `index.html` | Home / landing page (hero, philosophy, Simply Sudoku, screenshot gallery, download, donate). |
+| `simple-sudoku.html` | Product page for Simply Sudoku — feature tour with screenshots, download, donate. |
 | `privacy.html` | Privacy Policy — **required** by Google Play and Apple. |
 | `support.html` | Support / FAQ / contact — used as the app stores' "support URL". |
 | `terms.html` | Terms of Use. |
