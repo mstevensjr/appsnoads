@@ -62,7 +62,7 @@ The Stripe checkout is wired throughout (nav, hero, donate section, footer,
 support page):
 
 ```
-https://buy.stripe.com/8x2dR24870mZ4cyg6k1B602
+https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605
 ```
 
 To change it, search-and-replace that URL across the `.html` files.
