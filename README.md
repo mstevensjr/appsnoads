@@ -16,6 +16,35 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 | `favicon.svg` | Site icon (the Sudoku mark). |
 | `screenshots/` | App screenshots used across the site (optimized JPEGs, ~540px wide). |
 
+## News page — two test versions (temporary, to compare & pick one)
+
+Two throwaway approaches for a blog/news page live side by side so we can choose
+one and delete the other. They are **`noindex`** and only reachable by direct URL
+(not linked from the main nav yet).
+
+**Version 1 — hand-written HTML** (`appsnoads.com/news-testing/`)
+| File | Purpose |
+|---|---|
+| `news-testing/index.html` | Post list. |
+| `news-testing/2026-08-07-simply-sudoku-1-5-8.html`, `news-testing/2026-08-05-welcome.html` | Two sample posts (complete HTML pages). |
+| `news-testing/_post-template.html` | Copy-me template (leading `_` = not published). |
+
+Edit in the GitHub web editor or locally; no build step. To keep this version:
+delete everything in the Version-2 list below, then rename `news-testing/`.
+
+**Version 2 — Jekyll + Decap CMS dashboard** (`appsnoads.com/news-testing-2/`, editor at `/admin/`)
+| File | Purpose |
+|---|---|
+| `_config.yml` | Turns on Jekyll (+ `jekyll-feed` → `/feed.xml`). |
+| `_layouts/nt2_base.html`, `_layouts/nt2_post.html` | Site chrome + single-post template. |
+| `news-testing-2/index.html` | Post list, generated from `_posts/` via Liquid. |
+| `_posts/*.md` | Posts written in **Markdown**. |
+| `admin/index.html`, `admin/config.yml` | Decap CMS editor — **demo (`test-repo`) backend**, no login, nothing saves. Real publishing needs the GitHub backend + a one-time free OAuth helper (Cloudflare Worker). |
+
+To keep this version: delete the `news-testing/` folder. To drop it instead:
+delete `_config.yml`, `_layouts/`, `_posts/`, `news-testing-2/`, and `admin/`
+(that turns Jekyll back off).
+
 ## Preview locally
 
 Just open `index.html` in a browser, or serve the folder:

@@ -1,0 +1,26 @@
+# Jekyll config — added for the "Version 2" news test (news-testing-2/).
+# Existing hand-written pages have no front matter, so Jekyll copies them
+# through unchanged. If you keep Version 1 instead, delete this file (and the
+# _layouts/ + _posts/ folders and admin/) to turn Jekyll back off.
+title: Apps No Ads
+description: Distraction-free, useful apps — no ads, no tracking.
+url: https://appsnoads.com
+
+# Auto-generate an RSS feed at /feed.xml from _posts (a Jekyll+CMS perk).
+plugins:
+  - jekyll-feed
+
+# Every file in _posts uses the post layout automatically — no per-file wiring.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: nt2_post
+
+# Keep Jekyll from copying editor/instruction cruft into the built site.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock

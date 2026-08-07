@@ -1,0 +1,37 @@
+# ---------------------------------------------------------------------------
+# Decap CMS config for the "Version 2" news test.
+#
+# DEMO: backend "test-repo" loads the editor with in-memory sample data so you
+# can explore it with NO login and NO setup. Nothing is saved.
+#
+# REAL PUBLISHING: comment out the test-repo line and uncomment the github
+# block, then set up the one-time free OAuth helper (Cloudflare Worker) and put
+# its address in base_url. Then logging in commits real posts to _posts/.
+# ---------------------------------------------------------------------------
+backend:
+  name: test-repo
+
+# backend:
+#   name: github
+#   repo: mstevensjr/appsnoads
+#   branch: main
+#   base_url: https://YOUR-OAUTH-HELPER.workers.dev
+
+media_folder: "screenshots"
+public_folder: "/screenshots"
+
+collections:
+  - name: "news"
+    label: "News post"
+    label_singular: "News post"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date | date('yyyy-MM-dd')}} — {{title}}"
+    sort: "date:desc"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "yyyy-MM-dd", time_format: false }
+      - { label: "Category", name: "category", widget: "string", default: "Notes", required: false }
+      - { label: "Summary (for the list page)", name: "description", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

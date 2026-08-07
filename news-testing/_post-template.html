@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  HOW TO ADD A POST (Version 1 — hand-written HTML)
+  1. Copy this file to:  news-testing/YYYY-MM-DD-a-short-slug.html
+  2. Fill in the four spots marked  << ... >>  below (title, date, body).
+  3. Add a matching <article> card to  news-testing/index.html  (copy an
+     existing one and change the link, date, title, and blurb).
+  4. Commit + push  (or edit right in the GitHub web editor). Live in ~30s.
+  This file starts with "_" so GitHub Pages does NOT publish it — it's just
+  a template you copy from.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><< POST TITLE >> — Apps No Ads</title>
+<meta name="description" content="<< one-sentence summary >>">
+<meta name="theme-color" content="#4c1d95">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="Apps No Ads — home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#6d28d9"/><g stroke="rgba(255,255,255,.9)" stroke-width="2.5" fill="none"><rect x="14" y="14" width="36" height="36" rx="3"/><line x1="26" y1="14" x2="26" y2="50"/><line x1="38" y1="14" x2="38" y2="50"/><line x1="14" y1="26" x2="50" y2="26"/><line x1="14" y1="26" x2="50" y2="26"/><line x1="14" y1="38" x2="50" y2="38"/></g></svg>
+      <span>Apps<span class="brand-accent">No</span>Ads</span>
+    </a>
+    <nav class="nav-links">
+      <a href="/simple-sudoku.html">Simply Sudoku</a>
+      <a href="/index.html#why">Why no ads</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container" style="max-width:72ch">
+    <p class="muted" style="margin:0 0 .3rem"><a href="/news-testing/" style="color:inherit">&larr; All news</a></p>
+    <p class="eyebrow">Notes</p>
+    <h1 style="margin-top:.2rem"><< POST TITLE >></h1>
+    <p class="muted"><time datetime="<< YYYY-MM-DD >>"><< Month D, YYYY >></time></p>
+
+    <p class="lead"><< opening line >></p>
+
+    <p><< write your post here, in normal HTML paragraphs >></p>
+
+    <p style="margin-top:2rem"><a class="btn btn-ghost btn-sm" href="/news-testing/">&larr; Back to all news</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border:0">
+      <span>&copy; 2026 Melvin Stevens &middot; Apps No Ads. All rights reserved.</span>
+      <span>Built with no trackers, no cookies, no third-party fonts.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

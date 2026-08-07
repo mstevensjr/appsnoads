@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} — Apps No Ads</title>
+<meta name="description" content="{{ page.description | default: 'News and notes from Apps No Ads.' }}">
+<meta name="theme-color" content="#4c1d95">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css">
+{% feed_meta %}
+</head>
+<body>
+
+<!-- TEST BANNER (temporary — delete with this page) -->
+<div style="background:#065f46;color:#fff;padding:10px 0;font-size:.9rem">
+  <div class="container" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center">
+    <strong>TEST · Version 2 — Jekyll + /admin (Decap CMS)</strong>
+    <span style="opacity:.6">·</span>
+    <a href="/admin/" style="color:#fdba74;font-weight:700">Open the /admin editor (demo) &rarr;</a>
+    <span style="opacity:.6">·</span>
+    <a href="/news-testing/" style="color:#fff;text-decoration:underline">Compare V1</a>
+    <span style="opacity:.6">·</span>
+    <a href="/index.html" style="color:#fff;text-decoration:underline">Back to site</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/index.html" aria-label="Apps No Ads — home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#6d28d9"/><g stroke="rgba(255,255,255,.9)" stroke-width="2.5" fill="none"><rect x="14" y="14" width="36" height="36" rx="3"/><line x1="26" y1="14" x2="26" y2="50"/><line x1="38" y1="14" x2="38" y2="50"/><line x1="14" y1="26" x2="50" y2="26"/><line x1="14" y1="38" x2="50" y2="38"/></g><text x="20" y="24.5" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">5</text><text x="44" y="48.5" font-size="10" font-weight="700" fill="#f5a623" text-anchor="middle">3</text></svg>
+      <span>Apps<span class="brand-accent">No</span>Ads</span>
+    </a>
+    <input type="checkbox" id="navToggle" class="nav-toggle" hidden>
+    <nav class="nav-links">
+      <a href="/simple-sudoku.html">Simply Sudoku</a>
+      <a href="/index.html#why">Why no ads</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-donate btn-sm" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">&#9829; Donate</a>
+      <label for="navToggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+    </div>
+  </div>
+</header>
+
+{{ content }}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border:0">
+      <span>&copy; 2026 Melvin Stevens &middot; Apps No Ads. All rights reserved.</span>
+      <span>Built with no trackers, no cookies, no third-party fonts.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
