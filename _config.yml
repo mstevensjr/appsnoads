@@ -6,6 +6,11 @@ title: Apps No Ads
 description: Distraction-free, useful apps — no ads, no tracking.
 url: https://appsnoads.com
 
+# Clean post URLs grouped under the test folder, e.g.
+# /news-testing-2/simply-sudoku-1-5-8/  (without this, the post "category"
+# leaks into the path and a space becomes an ugly %20).
+permalink: /news-testing-2/:title/
+
 # Auto-generate an RSS feed at /feed.xml from _posts (a Jekyll+CMS perk).
 plugins:
   - jekyll-feed
