@@ -38,8 +38,8 @@ delete everything in the Version-2 list below, then rename `news-testing/`.
 | `_config.yml` | Turns on Jekyll (+ `jekyll-feed` → `/feed.xml`). |
 | `_layouts/nt2_base.html`, `_layouts/nt2_post.html` | Site chrome + single-post template. |
 | `news-testing-2/index.html` | Post list, generated from `_posts/` via Liquid. |
-| `_posts/*.md` | Posts written in **Markdown**. |
-| `admin/index.html`, `admin/config.yml` | Decap CMS editor — **demo (`test-repo`) backend**, no login, nothing saves. Real publishing needs the GitHub backend + a one-time free OAuth helper (Cloudflare Worker). |
+| `_posts/*.md` | Posts written in **Markdown** — and Markdown accepts raw **HTML/HTML5** inline (see `2026-08-06-what-html-can-do.md`, which drops in a styled callout, an image `<figure>`, and a button). |
+| `admin/index.html`, `admin/config.yml` | Decap CMS editor — **demo (`test-repo`) backend**, no login, nothing saves. The Body field is a **raw editor** (`modes: ["raw"]`) so you type Markdown *and/or* HTML. Real publishing needs the GitHub backend + a one-time free OAuth helper (Cloudflare Worker). |
 
 To keep this version: delete the `news-testing/` folder. To drop it instead:
 delete `_config.yml`, `_layouts/`, `_posts/`, `news-testing-2/`, and `admin/`

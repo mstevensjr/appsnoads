@@ -34,4 +34,6 @@ collections:
       - { label: "Date", name: "date", widget: "datetime", date_format: "yyyy-MM-dd", time_format: false }
       - { label: "Category", name: "category", widget: "string", default: "Notes", required: false }
       - { label: "Summary (for the list page)", name: "description", widget: "text", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      # Raw editor: type Markdown, full HTML/HTML5, or a mix — it passes straight
+      # through to the page. Remove `modes: ["raw"]` to get the rich WYSIWYG editor.
+      - { label: "Body — Markdown &/or HTML", name: "body", widget: "markdown", modes: ["raw"], hint: "Write Markdown, HTML/HTML5, or both. Try pasting a <div> or <figure> — it renders as-is." }
