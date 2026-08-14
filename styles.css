@@ -192,6 +192,22 @@ img { max-width: 100%; display: block; }
 .donate-band h2 { color: #6b4a00; }
 .donate-band p { color: #7a5a12; max-width: 52ch; margin-left: auto; margin-right: auto; }
 
+/* ---------- rate & review ---------- */
+.review-band {
+  position: relative; overflow: hidden;
+  background: radial-gradient(700px 380px at 85% -30%, #7c3aed 0%, transparent 60%),
+              linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-dark) 60%, #3a1f8f 100%);
+  color: #fff; border-radius: 22px; padding: 46px 44px; text-align: center; box-shadow: var(--shadow-lg);
+}
+.review-band .eyebrow { color: #d9c9ff; }
+.review-band h2 { color: #fff; }
+.review-band p { color: #e9e3fb; max-width: 56ch; margin-left: auto; margin-right: auto; }
+.review-band .stars { display: inline-flex; gap: 7px; margin-bottom: 14px; }
+.review-band .stars svg { width: 32px; height: 32px; color: var(--amber); filter: drop-shadow(0 3px 8px rgba(245,166,35,.45)); }
+.review-band .stores { margin-top: 24px; }
+.review-band .store { border-color: rgba(255,255,255,.14); }
+.review-note { color: #c9bff0; font-size: .9rem; margin-top: 16px; }
+
 /* ---------- footer ---------- */
 .site-footer { background: var(--bg-dark); color: #b9b2d6; padding: 56px 0 30px; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
