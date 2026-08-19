@@ -9,6 +9,7 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 |---|---|
 | `index.html` | Home / landing page (hero, philosophy, Simply Sudoku, screenshot gallery, download, donate). |
 | `simple-sudoku.html` | Product page for Simply Sudoku — feature tour with screenshots, download, donate. |
+| `guide.html` | User manual — "How to play Simply Sudoku": every feature explained (starting a game, entering numbers, sticky numbers, notes, hints, mistakes, check-when-ready mode, pausing, themes/board looks, landscape, privacy, keyboard shortcuts). Linked in the top nav as **Guide**. |
 | `privacy.html` | Privacy Policy — **required** by Google Play and Apple. |
 | `support.html` | Support / FAQ / contact — used as the app stores' "support URL". |
 | `terms.html` | Terms of Use. |

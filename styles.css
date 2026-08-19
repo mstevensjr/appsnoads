@@ -183,8 +183,8 @@ img { max-width: 100%; display: block; }
 }
 .store:hover { text-decoration: none; transform: translateY(-2px); transition: transform .12s ease; }
 .store svg { width: 26px; height: 26px; flex: none; }
-.store .l1 { font-size: .68rem; opacity: .8; line-height: 1; }
-.store .l2 { font-weight: 800; font-size: 1.02rem; line-height: 1.2; }
+.store .l1 { display: block; font-size: .68rem; opacity: .8; line-height: 1; }
+.store .l2 { display: block; font-weight: 800; font-size: 1.02rem; line-height: 1.2; }
 .store .soon { margin-left: auto; font-size: .62rem; background: var(--amber); color: #3a2600; padding: 2px 7px; border-radius: 999px; font-weight: 800; letter-spacing: .04em; }
 
 /* ---------- donate ---------- */
@@ -229,6 +229,17 @@ img { max-width: 100%; display: block; }
 .prose ul { padding-left: 1.2rem; }
 .prose li { margin-bottom: .4rem; }
 .prose .updated { color: var(--muted); font-size: .92rem; margin-bottom: 2rem; }
+.prose table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .98rem; }
+.prose th, .prose td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.prose thead th { background: var(--bg-soft); color: var(--ink); font-weight: 700; }
+.prose code { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: .9em; }
+/* multi-paragraph feature blocks (used on the guide) need spacing between stacked <p> */
+.feat p + p { margin-top: .9rem; }
+/* standalone app screenshots on the guide (desktop captures, not phone-framed) */
+figure.shotfig { margin: 1.7rem auto 0; text-align: center; max-width: 760px; }
+figure.shotfig img { width: 100%; max-width: 360px; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 12px 34px rgba(0,0,0,.10); }
+figure.shotfig.wide img { max-width: 100%; }
+figure.shotfig figcaption { color: var(--muted); font-size: .9rem; margin-top: .55rem; }
 .callout { background: var(--bg-soft); border: 1px solid var(--line); border-left: 4px solid var(--violet); border-radius: 10px; padding: 18px 20px; margin: 1.4rem 0; }
 .callout strong { color: var(--ink); }
 
