@@ -204,9 +204,44 @@ img { max-width: 100%; display: block; }
 .review-band p { color: #e9e3fb; max-width: 56ch; margin-left: auto; margin-right: auto; }
 .review-band .stars { display: inline-flex; gap: 7px; margin-bottom: 14px; }
 .review-band .stars svg { width: 32px; height: 32px; color: var(--amber); filter: drop-shadow(0 3px 8px rgba(245,166,35,.45)); }
-.review-band .stores { margin-top: 24px; }
+.review-band .stores { margin-top: 26px; }
 .review-band .store { border-color: rgba(255,255,255,.14); }
 .review-note { color: #c9bff0; font-size: .9rem; margin-top: 16px; }
+
+/* ---------- review emphasis (top-bar button + amplified band) ---------- */
+/* Reviews are the app's only "advertising" — make the ask unmissable but on-brand. */
+.btn-review {
+  background: linear-gradient(135deg, var(--violet) 0%, var(--violet-dark) 100%);
+  color: #fff; box-shadow: 0 8px 22px rgba(76,29,149,.30);
+  animation: reviewGlow 2.6s ease-in-out infinite;
+}
+.btn-review:hover { color: #fff; }
+.btn-review .star { color: #ffcf4d; font-size: 1.05em; line-height: 1; }
+@keyframes reviewGlow {
+  0%, 100% { box-shadow: 0 8px 22px rgba(76,29,149,.30); }
+  50%      { box-shadow: 0 10px 30px rgba(245,166,35,.55); }
+}
+
+.review-band { padding: 60px 44px; }
+.review-band .eyebrow { font-size: .9rem; }
+.review-band h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: .35em; }
+.review-band .lead-review { font-size: 1.26rem; font-weight: 700; color: #fff; max-width: 60ch; margin: 0 auto 1rem; }
+.review-band .stars { margin-bottom: 18px; }
+.review-band .stars svg { width: 40px; height: 40px; animation: starPulse 2.4s ease-in-out infinite; transform-origin: center bottom; }
+.review-band .stars svg:nth-child(2) { animation-delay: .12s; }
+.review-band .stars svg:nth-child(3) { animation-delay: .24s; }
+.review-band .stars svg:nth-child(4) { animation-delay: .36s; }
+.review-band .stars svg:nth-child(5) { animation-delay: .48s; }
+@keyframes starPulse { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-3px) scale(1.14); } }
+.review-band .btn-review { animation: none; font-size: 1.08rem; margin-top: 4px; }
+
+.review-reasons { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 22px auto 4px; max-width: 720px; }
+.review-reasons li { display: inline-flex; align-items: center; gap: .5rem; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18); color: #fff; padding: .55rem 1rem; border-radius: 999px; font-weight: 600; font-size: .95rem; }
+.review-reasons svg { width: 18px; height: 18px; color: #ffcf4d; flex: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-review, .review-band .stars svg { animation: none; }
+}
 
 /* ---------- footer ---------- */
 .site-footer { background: var(--bg-dark); color: #b9b2d6; padding: 56px 0 30px; }
@@ -281,6 +316,10 @@ figure.shotfig figcaption { color: var(--muted); font-size: .9rem; margin-top: .
 }
 @media (max-width: 560px) {
   .section { padding: 60px 0; }
+  .nav-actions { gap: .4rem; }
+  .nav-actions .btn-sm { padding: .5rem .72rem; font-size: .82rem; }
+  .review-band { padding: 40px 22px; }
+  .review-reasons li { font-size: .88rem; padding: .5rem .85rem; }
   .grid-3, .grid-2, .ethos .ticklist { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .donate-band { padding: 30px 20px; }

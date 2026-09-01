@@ -70,10 +70,12 @@ old site first. The donation link already points at your Stripe checkout.
 
 ## Before you launch — customize these
 
-1. **Store links** — in `index.html`, the three "Coming soon" store buttons
-   (`<a class="store" href="#">`) are placeholders. Replace `href="#"` with the
-   real Google Play / App Store / Microsoft Store URLs and delete the
-   `<span class="soon">SOON</span>` tags when each version is live.
+1. **Store links** — Google Play and the **App Store**
+   (`apps.apple.com/app/id6799698344`) are now wired live across the site. The only
+   remaining placeholder is the **Microsoft Store** button (`<a class="store"
+   href="#">` with a `SOON` badge, in `index.html` and `simple-sudoku.html`) —
+   replace `href="#"` and delete the `<span class="soon">SOON</span>` when the
+   Windows version ships.
 2. **Screenshots** — real app screenshots live in `screenshots/` and appear in
    the hero, the home gallery, and the product-page feature tour. To refresh
    them, replace the JPEGs (keep the same file names); ~540px wide keeps the
@@ -96,6 +98,56 @@ https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605
 ```
 
 To change it, search-and-replace that URL across the `.html` files.
+
+## Recent changes
+
+### 2026-09-01 — iOS launch: App Store links wired site-wide
+The iOS app went live as **"Simply Sudoku by AppsNoAds"**
+(`apps.apple.com/app/id6799698344`, bundle `com.appsnoads.simplysudoku`), so every
+App Store placeholder was replaced with the real listing.
+
+- **App Store *review* links** (`index`, `simple-sudoku`, `support`, `guide`,
+  `philosophy`) — the `<a class="store" href="#">` placeholder (and its `TODO`
+  comment) now points at `https://apps.apple.com/app/id6799698344`
+  (`target="_blank" rel="noopener"`).
+- **App Store *download* button** (`index`, `simple-sudoku` `#get`) — changed from
+  a disabled *"Coming soon on the App Store"* + `SOON` badge to a live *"Download on
+  the App Store"* link. Microsoft Store stays *Coming soon* (Windows not shipped).
+- **Download intro copy** (`index`, `simple-sudoku`) — *"Now on Google Play … iOS
+  and Windows are coming soon."* → *"Now on Google Play and the App Store … A
+  Windows version is coming soon."*
+- **Review-note** (all five review-band pages) — *"Now live on Google Play — the
+  App Store link goes live when the iOS version launches."* → *"Live now on both
+  Google Play and the App Store."*
+- **`guide.html` / `philosophy.html`** — these two also carry the review band but
+  had been missed in the emphasis pass below; they were brought to parity (new
+  eyebrow/heading, `.lead-review`, `.review-reasons` pills) at the same time.
+
+### 2026-09-01 — Big site-wide emphasis on ratings & reviews
+Reviews are Simply Sudoku's only "advertising" (no ad budget), so the review ask
+was made unmissable across the whole site.
+
+- **`styles.css`** — new **`.btn-review`** top-bar button (violet gradient + gold
+  `★`, gentle `reviewGlow` box-shadow pulse) so it stands out beside the amber
+  `.btn-donate`. Amplified **`.review-band`**: taller padding (46→60px), larger
+  heading (`clamp(2rem,5vw,3rem)`), new **`.lead-review`** bold subhead, bigger
+  **pulsing stars** (32→40px, staggered `starPulse`), and a new **`.review-reasons`**
+  pill row (30 seconds · free · helps others). Added a `prefers-reduced-motion`
+  guard that disables both animations, and a `≤560px` block that shrinks the
+  nav buttons (so `★ Review` + `♥ Donate` + hamburger all fit) and the band.
+- **Every page** (`index`, `simple-sudoku`, `support`, `guide`, `philosophy`,
+  `privacy`, `terms`) — added a persistent **`★ Review`** button to the top-bar
+  `.nav-actions`, before Donate. Pages with a review band link to `#review`; the
+  rest link to `index.html#review`.
+- **`index` / `simple-sudoku` / `support`** — rewrote the review band copy:
+  eyebrow *"Enjoying Simply Sudoku?"* → *"The #1 way to help — bigger than a
+  donation"*; heading *"Please rate & review it"* → *"Please rate & review Simply
+  Sudoku"*; added the free/30-second/discovery reason pills and a "great reviews
+  are our advertising" explanation; review-note now thanks past reviewers.
+- **`support.html`** — the *"How can I support the app?"* FAQ answer now leads with
+  rate & review as the single best (free) way to help.
+- **Footers** (`index`, `simple-sudoku`, `support`) — added a **★ Rate & review**
+  link to the Product column.
 
 ## Notes
 
