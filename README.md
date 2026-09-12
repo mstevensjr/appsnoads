@@ -114,6 +114,18 @@ To change it, search-and-replace that URL across the `.html` files.
 
 ## Recent changes
 
+### 2026-09-12 (later still) — Crosswords Pro: separate edition, no IAP
+Owner's decision: **no in-app purchases anywhere; every Pro is a separate store
+listing.** `index.html` gained a seventh card, **Crosswords Pro** (paid once,
+coming soon), after Crosswords. `crosswords.html` gained a **`#pro` "Free and
+Pro" section** with a `.compare` table (free: unlimited puzzles, four levels,
+7×7 / 11×11, check/reveal; Pro: timer and pause, density picker, and — as they're
+finished — 15×15 / 21×21 grids and themed clue sets, per the gates in
+`CrossWordsANA\Crosswords.Features.pas`; the tfoot says the Pro rows may shift
+before launch), the promise band now says "a separate app you buy once", its
+tick list gained "No in-app purchases", and the download copy names both
+editions.
+
 ### 2026-09-12 (later) — Crosswords added
 - **`index.html`** — sixth app card, **Crosswords** (free, "Coming soon", iOS ·
   macOS · Windows · Linux), between LexiFlux Pro and AFM so the grid is 3×2.
