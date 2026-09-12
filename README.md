@@ -10,9 +10,10 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 | `index.html` | Home — the **Apps No Ads apps page**: brand hero, the five app cards (Simply Sudoku, Simply Sudoku Pro, LexiFlux, LexiFlux Pro, Another File Manager), trust bar, philosophy, rate & review, buy-the-author-a-coffee. |
 | `simple-sudoku.html` | Product page for Simply Sudoku (+ the `#pro` Free/Pro comparison) — feature tour with screenshots, download, coffee. |
 | `lexiflux.html` | Product page for LexiFlux (+ `#pro` LexiFlux Pro) — how it plays, the physics, today's puzzle, "coming soon" store buttons. |
+| `crosswords.html` | Product page for Crosswords by Apps No Ads — generated-offline puzzles, four feature rows, promise band, SOON buttons (App Store, Microsoft Store, Linux). |
 | `afm.html` | Product page for Another File Manager (AFM) — feature cards, live screenshot, "in development / ask for an early build". |
 | `brand/` | The Apps No Ads mark and lockups, copied from `Dev\Branding\AppsNoAds` (never redraw): `mark-copper-64/128/256.png`, `lockup-wordmark.png`, `lockup-wordmark-light.png`, `tile-dark.png`. `mark-copper-64.png` is the favicon. |
-| `apps/` | App icons for the home-page cards: `simply-sudoku.png` (256, from `Sudoku\icon\sudoku_icon_1024.png`), `lexiflux.png` (192, `LexiFlux\docs\icon.png`), `afm.png` (128, from `AFM\AFileManagerV\AFMV_Icon.ico`). |
+| `apps/` | App icons for the home-page cards: `simply-sudoku.png` (256, from `Sudoku\icon\sudoku_icon_1024.png`), `lexiflux.png` (192, `LexiFlux\docs\icon.png`), `crosswords.png` (256, from `CrossWordsANA\assets\icons\ios\icon_1024.png`), `afm.png` (128, from `AFM\AFileManagerV\AFMV_Icon.ico`). |
 | `guide.html` | User manual — "How to play Simply Sudoku" (v1.7): the start panel, today's puzzle, custom games (Pro), entering numbers, sticky numbers, notes, hints, mistakes, check-when-ready mode, pausing &amp; continue, statistics, settings, themes/board looks, landscape (Pro), privacy, rating &amp; feedback, Free vs Pro, keyboard shortcuts. Linked in the top nav as **Guide**. |
 | `privacy.html` | Privacy Policy — **required** by Google Play and Apple. |
 | `support.html` | Support / FAQ / contact — used as the app stores' "support URL". |
@@ -112,6 +113,25 @@ https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605
 To change it, search-and-replace that URL across the `.html` files.
 
 ## Recent changes
+
+### 2026-09-12 (later) — Crosswords added
+- **`index.html`** — sixth app card, **Crosswords** (free, "Coming soon", iOS ·
+  macOS · Windows · Linux), between LexiFlux Pro and AFM so the grid is 3×2.
+- **`crosswords.html` (new)** — hero + four feature rows written from
+  `CrossWordsANA\Architecture.md` (ship set: Easy–Expert, 7×7 / 11×11, density,
+  auto-check / ✓ Check, Reveal letter/word/puzzle, timer, clue navigation,
+  on-screen keyboard, SCOWL / WordNet® / Crossword Nexus / Abate word sources),
+  promise band noting a planned Pro tier, SOON store buttons for the App Store,
+  Microsoft Store and a Linux download, coffee + feedback.
+- **Screenshots** — `crosswords-portrait.png` (420×900) and
+  `crosswords-landscape.png` (1000×660) captured from the v0.96 Win64 Release
+  build (a dev build: the "(any theme)" clue-theme picker and the Dark theme
+  dropdown it shows are not in the ship set). `apps/crosswords.png` from the iOS
+  1024 icon.
+- **Nav on every page** now has eight links (… LexiFlux · **Crosswords** · AFM …);
+  `styles.css` tightened `.nav-links` gap to 1.25rem and moved the hamburger
+  breakpoint from 720px to **980px** so the links never crowd the buttons.
+  Footers gained Crosswords. `support.html`'s "when are they coming" FAQ covers it.
 
 ### 2026-09-12 — Apps No Ads apps site: brand mark, "buy the author a coffee", five apps
 Three changes asked for together: put the Apps No Ads logo on the pages, turn

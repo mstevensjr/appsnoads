@@ -92,10 +92,10 @@ img { max-width: 100%; display: block; }
 .brand-accent { color: var(--amber-dark); }
 /* the Apps No Ads mark ("Tail Gap" spiral) + lower-case wordmark, per BRAND.md */
 .brand .mark { width: 36px; height: 36px; flex: none; }
-.brand .wordmark { font-weight: 800; letter-spacing: -.01em; text-transform: lowercase; color: var(--charcoal); }
+.brand .wordmark { font-weight: 800; letter-spacing: -.01em; text-transform: lowercase; color: var(--charcoal); white-space: nowrap; }
 .brand .wordmark em { font-style: normal; color: var(--copper); }
-.nav-links { display: flex; align-items: center; gap: 1.6rem; margin-left: auto; }
-.nav-links a { color: var(--ink); font-weight: 600; font-size: .98rem; }
+.nav-links { display: flex; align-items: center; gap: 1.25rem; margin-left: auto; }
+.nav-links a { color: var(--ink); font-weight: 600; font-size: .98rem; white-space: nowrap; }
 .nav-links a:hover { color: var(--violet); text-decoration: none; }
 .nav-toggle, .nav-toggle-label { display: none; }
 
@@ -356,7 +356,7 @@ figure.shotfig figcaption { color: var(--muted); font-size: .9rem; margin-top: .
   .feat { grid-template-columns: 1fr; gap: 22px; }
   .feat .media, .feat.rev .media { order: -1; } /* screenshot on top when stacked */
 }
-@media (max-width: 720px) {
+@media (max-width: 1080px) { /* 8 nav links need the hamburger below ~1080px */
   .nav-links {
     position: absolute; top: 68px; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
