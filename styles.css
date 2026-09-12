@@ -278,6 +278,25 @@ figure.shotfig figcaption { color: var(--muted); font-size: .9rem; margin-top: .
 .callout { background: var(--bg-soft); border: 1px solid var(--line); border-left: 4px solid var(--violet); border-radius: 10px; padding: 18px 20px; margin: 1.4rem 0; }
 .callout strong { color: var(--ink); }
 
+/* ---------- Free vs Pro ---------- */
+.pro-badge { display: inline-block; vertical-align: middle; margin-left: .45rem; padding: 2px 9px; border-radius: 999px;
+  background: linear-gradient(135deg, var(--amber), var(--amber-dark)); color: #3a2600; font-size: .68rem; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; }
+.compare { width: 100%; border-collapse: collapse; margin: 1.6rem auto 0; max-width: 760px; background: #fff;
+  border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); font-size: .98rem; }
+.compare th, .compare td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.compare tr:last-child td { border-bottom: 0; }
+.compare thead th { background: var(--bg-soft); color: var(--ink); font-weight: 800; }
+.compare thead th:not(:first-child), .compare td:not(:first-child) { text-align: center; width: 24%; }
+.compare td:first-child { color: var(--ink); font-weight: 600; }
+.compare .yes { color: #1e8e3e; font-weight: 800; }
+.compare .no { color: var(--muted); }
+.compare tfoot td { background: var(--bg-soft); color: var(--body); font-size: .9rem; text-align: left; }
+@media (max-width: 560px) {
+  .compare { font-size: .88rem; }
+  .compare th, .compare td { padding: 10px 10px; }
+}
+
 /* ---------- faq ---------- */
 .faq details { border: 1px solid var(--line); border-radius: 12px; padding: 4px 20px; margin-bottom: 12px; background: #fff; }
 .faq summary { cursor: pointer; font-weight: 700; color: var(--ink); padding: 16px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; }

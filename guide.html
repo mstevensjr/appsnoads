@@ -14,12 +14,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to Play Simply Sudoku — the complete guide | Apps No Ads</title>
-<meta name="description" content="A complete guide to Simply Sudoku: starting a game, entering numbers, sticky numbers, pencil notes, hints, the mistake limit, check-when-ready mode, themes, board looks, and every setting explained.">
+<meta name="description" content="A complete guide to Simply Sudoku: the start panel, today's puzzle, custom games, entering numbers, sticky numbers, pencil notes, hints, the mistake limit, check-when-ready mode, statistics, themes, board looks, every setting, and what's in Free vs Pro.">
 <meta name="theme-color" content="#4c1d95">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="How to Play Simply Sudoku — the complete guide">
-<meta property="og:description" content="Every feature explained: sticky numbers, notes, hints, check-when-ready mode, themes, board looks, and every setting.">
+<meta property="og:description" content="Every feature explained: the start panel, today's puzzle, custom games, sticky numbers, notes, hints, check-when-ready mode, statistics, themes, board looks, and every setting.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://appsnoads.com/guide.html">
 </head>
@@ -51,7 +51,7 @@
 <section class="page-head">
   <div class="container">
     <h1>How to play Simply Sudoku</h1>
-    <p>A quick guide to every feature — from your first puzzle to sticky numbers, notes, hints, and the settings that change how the game plays.</p>
+    <p>A quick guide to every feature — from the start panel and today’s puzzle to sticky numbers, notes, hints, statistics, and the settings that change how the game plays. Written for version 1.7.</p>
   </div>
 </section>
 
@@ -61,7 +61,9 @@
     <div class="callout">
       <strong>On this page:</strong>
       <a href="#basics">Sudoku in 20 seconds</a> ·
-      <a href="#start">Starting a game</a> ·
+      <a href="#start">The start panel</a> ·
+      <a href="#daily">Today’s puzzle</a> ·
+      <a href="#custom">Custom games</a> ·
       <a href="#board">Reading the board</a> ·
       <a href="#enter">Entering numbers</a> ·
       <a href="#sticky">Sticky numbers</a> ·
@@ -70,10 +72,14 @@
       <a href="#undo">Undo &amp; the timer</a> ·
       <a href="#mistakes">Mistakes &amp; the limit</a> ·
       <a href="#check">Check-when-ready mode</a> ·
-      <a href="#pause">Pausing</a> ·
+      <a href="#pause">Pausing &amp; continuing</a> ·
+      <a href="#stats">Statistics</a> ·
+      <a href="#settings">Settings</a> ·
       <a href="#looks">Themes &amp; board looks</a> ·
       <a href="#landscape">Landscape play</a> ·
       <a href="#privacy">Privacy &amp; screenshots</a> ·
+      <a href="#rate">Rating &amp; feedback</a> ·
+      <a href="#editions">Free vs Pro</a> ·
       <a href="#keys">Keyboard shortcuts</a>
     </div>
   </div>
@@ -88,27 +94,60 @@
         <p>Fill the 9×9 grid so that every <strong>row</strong>, every <strong>column</strong>, and every <strong>3×3 box</strong> contains the digits 1–9 with no repeats. Some cells start filled — those are your clues.</p>
         <p>Every puzzle in Simply Sudoku has <strong>exactly one solution</strong>, so you can always get there by logic alone. You never have to guess.</p>
       </div>
-      <div class="media"><div class="device"><img src="screenshots/gameplay.jpg" width="540" height="1170" loading="lazy" alt="A Simply Sudoku board mid-game, with clues and entered numbers on a clean grid."></div></div>
+      <div class="media"><div class="device"><img src="screenshots/gameplay.png" width="420" height="900" loading="lazy" alt="A Simply Sudoku board mid-game, with clues and entered numbers on a clean grid."></div></div>
     </div>
   </div>
 </section>
 
-<!-- START -->
+<!-- START PANEL -->
 <section class="section section-soft" id="start">
   <div class="container">
     <div class="feat rev">
       <div>
-        <h2 style="margin-top:0">Starting a game</h2>
-        <p>Tap <strong>New</strong> at any time for a fresh puzzle. If a game is already in progress you’ll be asked to confirm first, so you never lose a puzzle by accident.</p>
-        <p><strong>Choosing difficulty:</strong> pick <strong>Easy</strong>, <strong>Medium</strong>, <strong>Hard</strong>, or <strong>Expert</strong>. Two settings decide what you get on launch — a <strong>Default level</strong> (the level every new game starts at), and <strong>“Ask me for a level when the game opens”</strong>, which pops up a quick difficulty picker each time the app starts.</p>
-        <p class="callout" style="display:block"><strong>Skip the confirmation:</strong> a small <strong>“Don’t warn on New”</strong> checkbox sits right beside the <strong>New</strong> button. Tick it and tapping <strong>New</strong> starts a fresh puzzle immediately, without asking. (Changing difficulty mid-game still confirms, so you can’t wipe a game just by tapping a level.)</p>
+        <h2 style="margin-top:0">The start panel</h2>
+        <p>After a brief splash, Simply Sudoku opens on the <strong>start panel</strong> — the one screen that offers every way to begin. From top to bottom:</p>
+        <ul>
+          <li><strong>LEVEL</strong> — tap <strong>Easy</strong>, <strong>Medium</strong>, <strong>Hard</strong> or <strong>Expert</strong>. The pill you pick is remembered and preselected next time. (Hard and Expert are in <a href="#editions">Pro</a>; in the free edition you can still tap them to see what’s there.)</li>
+          <li><strong>CONTINUE</strong> — shown whenever an unfinished game is waiting, with its level, time and cells to go. It’s always offered; there is no setting to turn on.</li>
+          <li><strong>TODAY’S PUZZLE</strong> — the <a href="#daily">daily puzzle</a> for the selected level, and whether you’ve played it yet.</li>
+          <li><strong>NEW GAME</strong> — a fresh random puzzle at the selected level.</li>
+          <li><strong>CUSTOM GAME</strong> — a puzzle dealt from a number or word you type (<a href="#custom">Pro</a>).</li>
+          <li><strong>STATISTICS</strong>, <strong>ABOUT</strong> and <strong>★ RATE</strong>, then <strong>YOUR BEST</strong> — your best time per level.</li>
+        </ul>
+        <p>The same panel is what <strong>New</strong> opens during a game, and what a finished game’s <strong>New Game</strong> button brings you back to. Tap the round <strong>X</strong> (or <strong>Continue</strong>) to go back to the board you were on.</p>
+        <p class="callout" style="display:block"><strong>Never lose a game by accident:</strong> if you start something new while a game you’ve actually touched is in progress, Simply Sudoku asks first — <em>Start a new game? Your current game will be lost.</em> Decline and you’re back where you were. A freshly dealt puzzle you only looked at is replaced without asking.</p>
       </div>
-      <div class="media"><div class="device"><img src="screenshots/difficulty.jpg" width="540" height="1170" loading="lazy" alt="The difficulty picker showing Easy, Medium, Hard and Expert."></div></div>
+      <div class="media"><div class="device"><img src="screenshots/start-panel.png" width="420" height="900" loading="lazy" alt="The start panel: level pills, then Continue, Today's Puzzle, New Game, Custom Game, Statistics, About and Rate, and the Your Best table."></div></div>
     </div>
-    <figure class="shotfig">
-      <img src="screenshots/guide-newdialog.png" width="520" height="699" loading="lazy" alt="The New-game confirmation: “Start a new Medium game? Current game will be lost!” with No and Yes buttons.">
-      <figcaption>Tapping <strong>New</strong> mid-game asks first — unless you’ve ticked “Don’t warn on New”.</figcaption>
-    </figure>
+  </div>
+</section>
+
+<!-- DAILY -->
+<section class="section" id="daily">
+  <div class="container">
+    <div class="feat">
+      <div>
+        <h2 style="margin-top:0">Today’s puzzle</h2>
+        <p>Every day there is <strong>one puzzle per level that everyone gets</strong> — the same board on every phone, tablet and PC in the world, in both editions. Tap <strong>TODAY’S PUZZLE</strong> on the start panel; while you play, the line under the title reads <em>Medium · Daily · Fri 11 Sep</em> so you always know which game you’re in.</p>
+        <p>The card on the start panel keeps score for you: <em>Not played yet today</em>, or your time once you’ve solved it. Compare with a friend, or make it part of the morning routine — a new one arrives at midnight, local time.</p>
+        <p>Included in the <strong>free edition</strong> for Easy and Medium; Hard and Expert dailies come with Pro.</p>
+      </div>
+      <div class="media"><div class="device"><img src="screenshots/daily.png" width="420" height="900" loading="lazy" alt="A daily puzzle in play — the mode line under the title reads Medium - Daily - Fri 11 Sep."></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM -->
+<section class="section section-soft" id="custom">
+  <div class="container">
+    <div class="feat rev">
+      <div>
+        <h2 style="margin-top:0">Custom games from a number or word <span class="pro-badge">Pro</span></h2>
+        <p>The <strong>CUSTOM GAME</strong> card has a seed box. Type anything — <em>coffee</em>, a date, a lucky number — pick a level, and tap <strong>Press here to begin</strong>. That seed and level always deal <strong>exactly the same puzzle</strong>, on every platform, so you can share a seed with a friend and race the same board, or come back to a favourite.</p>
+        <p>A number of up to nine digits is used as-is, so the seed you see on screen (the game shows <em>Seed 531882</em> under the title) reads straight back into the box; a word is turned into a number for you. Because a custom game can be replayed with the answer known, it <strong>never sets a best time</strong> — it does count in your statistics.</p>
+      </div>
+      <div class="media"><div class="device"><img src="screenshots/seeded-game.png" width="420" height="900" loading="lazy" alt="A custom Expert game in play — the mode line reads Expert - Seed coffee."></div></div>
+    </div>
   </div>
 </section>
 
@@ -119,9 +158,9 @@
       <div>
         <h2 style="margin-top:0">Reading the board</h2>
         <p>Tap any cell and the board helps you scan it: its <strong>row, column, and 3×3 box</strong> are highlighted, and <strong>every cell holding the same number</strong> lights up too — perfect for spotting where a digit can still go.</p>
-        <p>Your original clues and the numbers you enter are always easy to tell apart.</p>
+        <p>Your original clues and the numbers you enter are always easy to tell apart. The header shows the game’s level and mode on the left and the clock and your best on the right; the row of buttons underneath is <strong>New · Hint · Undo · Redo · ⏸ Pause · ⚙ Settings · ? About · ★ Rate</strong>, and the line below it tracks mistakes and hints.</p>
       </div>
-      <div class="media"><div class="device"><img src="screenshots/features.jpg" width="540" height="1170" loading="lazy" alt="A selected cell highlighting its row, column, box and matching numbers."></div></div>
+      <div class="media"><div class="device"><img src="screenshots/gameplay.png" width="420" height="900" loading="lazy" alt="A selected cell highlighting its row, column, box and matching numbers."></div></div>
     </div>
   </div>
 </section>
@@ -142,8 +181,8 @@
       <li>The sticky pen respects <strong>Notes mode</strong>: with notes on, it pencils the digit in as a candidate instead of placing it.</li>
     </ul>
     <figure class="shotfig">
-      <img src="screenshots/guide-sticky.png" width="520" height="699" loading="lazy" alt="The number 1 key framed in amber as the active sticky pen, with every 1 on the board highlighted.">
-      <figcaption>The <strong>1</strong> key glows amber — it’s now the active pen, and every 1 already on the board is highlighted.</figcaption>
+      <img src="screenshots/sticky.png" width="420" height="900" loading="lazy" alt="The number 7 key framed in amber as the active sticky pen, with every 7 on the board highlighted.">
+      <figcaption>The <strong>7</strong> key glows amber — it’s now the active pen, and every 7 already on the board is highlighted.</figcaption>
     </figure>
 
     <h2 id="notes">Pencil notes</h2>
@@ -160,7 +199,7 @@
         <p>Stuck? Tap <strong>Hint</strong> (or press <strong>H</strong>). After a quick confirm, one correct digit appears in <strong>green on a pale-green cell</strong>, and an unobtrusive bar asks <strong>“Keep this hint?”</strong> — <strong>Keep</strong> commits it, <strong>Undo</strong> removes it.</p>
         <p>Either way it counts toward your hint limit, which depends on difficulty (Easy allows the most; Expert the fewest). When your hints are used up, the button disables.</p>
       </div>
-      <div class="media"><div class="device"><img src="screenshots/hint.jpg" width="540" height="1170" loading="lazy" alt="A hint revealing a digit in green with a Keep or Undo bar."></div></div>
+      <div class="media"><div class="device"><img src="screenshots/hint.png" width="420" height="900" loading="lazy" alt="A hint revealing a 4 in green with a Keep or Undo bar."></div></div>
     </div>
   </div>
 </section>
@@ -170,7 +209,7 @@
   <div class="container prose">
 
     <h2 id="undo" style="margin-top:0">Undo, redo &amp; the timer</h2>
-    <p><strong>Undo and redo are unlimited</strong> — step back and forward through your moves with the on-screen buttons or <strong>Ctrl+Z / Ctrl+Y</strong>. A <strong>timer</strong> runs while you play, and Simply Sudoku records your <strong>best time for each difficulty</strong>, shown right on screen and celebrated when you beat it.</p>
+    <p><strong>Undo and redo are unlimited</strong> — step back and forward through your moves with the on-screen buttons or <strong>Ctrl+Z / Ctrl+Y</strong>. A <strong>timer</strong> runs while you play, and Simply Sudoku records your <strong>best time for each level</strong>, shown in the header and on the start panel and celebrated when you beat it. (Random and daily games set best times; <a href="#custom">custom games</a> don’t, since they can be replayed.)</p>
 
     <h2 id="mistakes">Mistakes &amp; the mistake limit</h2>
     <p>By default, a wrong entry is shown in <strong>red</strong>, and the status line tracks <code>Mistakes: used / max</code>. Each difficulty has a <strong>mistake limit</strong> — reach it and the game ends with <strong>Game Over</strong>, where you can <strong>Retry</strong> the same puzzle or start a <strong>New Game</strong>. Prefer no safety net at all? See the next section.</p>
@@ -183,15 +222,11 @@
     <div class="feat">
       <div>
         <h2 style="margin-top:0">Check-when-ready mode</h2>
-        <p>In <strong>Settings</strong>, turn off <strong>“Highlight wrong numbers”</strong> for a pure challenge: mistakes are no longer shown in red, the mistake counter disappears, and you <strong>can’t lose</strong> on the mistake limit.</p>
+        <p>In <strong>Settings</strong>, switch off <strong>“Highlight wrong numbers in red”</strong> and tap <strong>Apply</strong> for a pure challenge: mistakes are no longer shown in red, the mistake counter disappears, and you <strong>can’t lose</strong> on the mistake limit.</p>
         <p>Instead, a <strong>✓ Check</strong> button appears. It stays disabled until <strong>every cell is filled</strong>, so you complete the whole puzzle first, then check it in one go. If it’s right, you win; if not, a <strong>“Not quite right”</strong> message lets you <strong>Keep Trying</strong> or <strong>Quit</strong>.</p>
       </div>
-      <div class="media"><div class="device"><img src="screenshots/settings.jpg" width="540" height="1170" loading="lazy" alt="Settings, including the Highlight wrong numbers toggle that enables check-when-ready mode."></div></div>
+      <div class="media"><div class="device"><img src="screenshots/check-mode.png" width="420" height="900" loading="lazy" alt="With wrong-number highlighting off, the mistake counter is gone and a check button sits at the right of the status row."></div></div>
     </div>
-    <figure class="shotfig">
-      <img src="screenshots/guide-check.png" width="520" height="699" loading="lazy" alt="With wrong-number highlighting off, a green check button appears in the toolbar and the mistake counter is gone.">
-      <figcaption>With highlighting off, the mistake counter disappears and a green <strong>✓ Check</strong> button joins the toolbar.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -199,8 +234,44 @@
 <section class="section section-soft" id="pause">
   <div class="container prose">
     <h2 style="margin-top:0">Pausing &amp; picking up where you left off</h2>
-    <p>Tap <strong>Pause</strong> to stop the clock — the board hides behind a <strong>“Paused”</strong> panel you tap to resume. The game also <strong>pauses automatically</strong> whenever you switch away from the app, and resumes when you come back. (A pause you started by hand stays paused until you resume it yourself.)</p>
-    <p>Want to close the app and finish later? Turn on <strong>“Resume interrupted game on next launch”</strong> in <strong>Settings</strong>. With it on, an unfinished puzzle comes back exactly as you left it — board, pencil notes, timer, and mistakes — the next time you open the app. Leave it off (the default) and every launch deals a fresh puzzle. Either way, your game stays <strong>only on your device</strong>.</p>
+    <p>Tap <strong>⏸ Pause</strong> to stop the clock — the board hides behind a <strong>“Paused”</strong> panel you tap to resume. The game also <strong>pauses automatically</strong> whenever you switch away from the app, and resumes when you come back. (A pause you started by hand stays paused until you resume it yourself.) The clock also stops whenever the start panel, Settings or Statistics is open.</p>
+    <p>Want to close the app and finish later? Just close it. An unfinished game is <strong>always saved</strong> when Simply Sudoku goes to the background or the window closes, and the next launch offers it back as <strong>CONTINUE</strong> on the start panel — board, pencil notes, timer and mistakes exactly as you left them. (Undo history isn’t kept across launches.) If you’ve turned on <em>Start a game right away at launch</em>, a <strong>WELCOME BACK</strong> card asks whether to <strong>Continue</strong> or start a <strong>New Game</strong> instead of silently resuming. Either way, your game stays <strong>only on your device</strong>.</p>
+  </div>
+</section>
+
+<!-- STATISTICS -->
+<section class="section" id="stats">
+  <div class="container">
+    <div class="feat">
+      <div>
+        <h2 style="margin-top:0">Statistics</h2>
+        <p>Tap <strong>STATISTICS</strong> on the start panel. Three tiles lead: <strong>WIN STREAK</strong> (wins in a row — a loss or an abandoned game resets it), <strong>DAY STREAK</strong> (consecutive calendar days with at least one win) and <strong>TIME PLAYED</strong>, each with its best.</p>
+        <p>In <strong>Pro</strong> the page continues per level — pick a pill for <em>played, won, lost, abandoned, win rate, perfect</em> (no mistakes and no hints), <em>best, average, last</em> and a <em>trend</em> (▼ faster or ▲ slower than your previous three wins), plus average mistakes and hints — then a <strong>LAST TEN</strong> strip (green win, red loss, grey abandon, newest on the left) and <strong>LIFETIME</strong> totals. <strong>Reset statistics</strong> clears the page after a confirmation; best times are kept.</p>
+        <p><strong>Every edition records everything.</strong> The free edition shows the three tiles and a <em>Full statistics</em> card; upgrade to Pro on the same device and your history is already there.</p>
+        <p class="callout" style="display:block"><strong>What counts as “abandoned”?</strong> Replacing a game you’ve actually worked on — an entry, a note, a hint or a mistake — with a new one. A freshly dealt puzzle you only looked at doesn’t count.</p>
+      </div>
+      <div class="media"><div class="device"><img src="screenshots/stats.png" width="420" height="900" loading="lazy" alt="The Statistics page in Pro: level pills, streak tiles, per-level figures, a last-ten strip, lifetime totals and Reset statistics."></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SETTINGS -->
+<section class="section section-soft" id="settings">
+  <div class="container">
+    <div class="feat rev">
+      <div>
+        <h2 style="margin-top:0">Settings</h2>
+        <p>Tap <strong>⚙</strong> in the top bar. Settings is a full page in the same look as the start panel, with a one-line explanation under each row. Nothing changes until you tap <strong>Apply</strong>; <strong>Cancel</strong> or the <strong>X</strong> leaves everything as it was.</p>
+        <ul>
+          <li><strong>Highlight wrong numbers in red</strong> — on by default. Off gives you <a href="#check">check-when-ready mode</a>.</li>
+          <li><strong>Allow screenshots</strong> <span class="pro-badge">Pro</span> — see <a href="#privacy">privacy &amp; screenshots</a>.</li>
+          <li><strong>Start a game right away at launch</strong> — skips the start panel: the next launch continues an unfinished game, or deals a fresh one at the level below.</li>
+          <li><strong>LEVEL</strong> — the level the start panel preselects. Picking a pill on the start panel changes this too, so the two always agree.</li>
+        </ul>
+        <p>Themes and board looks aren’t in Settings — they’re the two dropdowns on the main screen (<a href="#looks">below</a>).</p>
+      </div>
+      <div class="media"><div class="device"><img src="screenshots/settings.png" width="420" height="900" loading="lazy" alt="The Settings page: Highlight wrong numbers in red, Start a game right away at launch, the level pills, Cancel and Apply."></div></div>
+    </div>
   </div>
 </section>
 
@@ -210,8 +281,8 @@
     <div class="feat rev">
       <div>
         <h2 style="margin-top:0">Make it yours — themes &amp; board looks</h2>
-        <p>Two dropdowns on the main screen set the mood. <strong>Theme</strong> restyles the whole app (light, dark, warm, high-contrast and more). <strong>Board</strong> recolours just the 9×9 grid — <strong>12 looks</strong> including Classic, Paper, Mint, Slate, Rose, Lavender, Sunset, Midnight, Forest and Charcoal.</p>
-        <p>Mix and match to taste; your choices are remembered next time.</p>
+        <p>Two dropdowns on the main screen set the mood. <strong>Theme</strong> restyles the whole app; <strong>Board</strong> recolours just the 9×9 grid. The <strong>free edition</strong> has the Default and Dark themes and the Classic, Midnight and High-Contrast boards. <strong>Pro</strong> has all <strong>ten themes</strong> (light, dark, warm, high-contrast and more) and all <strong>twelve board looks</strong> — Classic, Paper, Mint, Slate, Rose, Lavender, Sunset, Midnight, Forest, Charcoal and more.</p>
+        <p>Mix and match to taste; your choices are remembered next time. The start panel, Settings and the dialogs keep their own dark look whatever theme you pick — only the board and toolbar follow it.</p>
       </div>
       <div class="media"><div class="device"><img src="screenshots/board-looks.jpg" width="540" height="1170" loading="lazy" alt="The Board picker listing the twelve board looks."></div></div>
     </div>
@@ -223,15 +294,36 @@
 <section class="section section-soft">
   <div class="container prose">
 
-    <h2 id="landscape" style="margin-top:0">Playing in landscape (and left-handed)</h2>
-    <p>Turn your phone sideways and Simply Sudoku reflows to a two-column layout — the board on one side, a phone-style <strong>3×3 keypad</strong> on the other. Tap the <strong>◀ / ▶ arrow</strong> in the keypad to swap the board and controls to the other side, so the keypad falls under your thumb whether you’re left- or right-handed. Your chosen side is remembered.</p>
+    <h2 id="landscape" style="margin-top:0">Playing in landscape (and left-handed) <span class="pro-badge">Pro</span></h2>
+    <p>In Pro, turn your phone sideways and Simply Sudoku reflows to a two-column layout — the board on one side, a phone-style <strong>3×3 keypad</strong> on the other. Tap the <strong>◀ / ▶ arrow</strong> in the keypad to swap the board and controls to the other side, so the keypad falls under your thumb whether you’re left- or right-handed. Your chosen side is remembered. The free edition plays in portrait only.</p>
     <figure class="shotfig wide">
-      <img src="screenshots/guide-landscape.png" width="1000" height="552" loading="lazy" alt="Landscape layout: the board on the left, and on the right a 3×3 keypad with pencil, a left-arrow flip control and erase.">
+      <img src="screenshots/landscape.png" width="960" height="540" loading="lazy" alt="Landscape layout: the board on the left, and on the right the header, toolbar and a 3×3 keypad with pencil, a left-arrow flip control and erase.">
       <figcaption>Landscape play — a 3×3 keypad on the right, with the <strong>◀</strong> flip control to move it to the other side.</figcaption>
     </figure>
 
     <h2 id="privacy">Your privacy &amp; screenshots</h2>
-    <p>Simply Sudoku works <strong>completely offline</strong> and stores your game, best times, and settings <strong>only on your device</strong>. On Android, the app also <strong>blanks its preview</strong> in the app-switcher by default (which also blocks screenshots) so a paused puzzle can’t be studied off the clock. Want screenshots anyway? Turn on <strong>“Allow screenshots”</strong> in Settings.</p>
+    <p>Simply Sudoku works <strong>completely offline</strong> and stores your game, best times, statistics and settings <strong>only on your device</strong>. On Android, the app also <strong>blanks its preview</strong> in the app-switcher by default (which also blocks screenshots) so a paused puzzle can’t be studied off the clock. Want screenshots anyway? In <strong>Pro</strong>, turn on <strong>“Allow screenshots”</strong> in Settings.</p>
+
+    <h2 id="rate">Rating, reviews &amp; feedback</h2>
+    <p>The amber <strong>★</strong> in the top bar (and <strong>★ RATE</strong> on the start panel) opens a small card with <strong>★ Rate this app</strong>, <strong>Write a review</strong> (where the store has a separate page for it) and <strong>Send feedback</strong>. The same three appear on the <strong>Congratulations!</strong> card after a win. Rating takes you to the app’s store page; <strong>Send feedback</strong> drafts an email in <em>your own</em> mail app with the app version filled in — Simply Sudoku itself sends nothing and opens no connection.</p>
+    <p>Very occasionally — after a personal best or a flawless Medium-or-harder solve, and never more than a few times ever — the app may ask for a rating through the store’s own review prompt. If you’ve rated already or would rather not be asked, it stops.</p>
+
+    <h2 id="editions">What’s in Free, what’s in Pro</h2>
+    <p>Simply Sudoku is free with no limits on how much you play. <strong>Simply Sudoku Pro</strong> is a separate edition on the same stores — <strong>one small payment, no subscription, nothing to unlock inside the app</strong>. The free edition marks the Pro-only cards <em>Available in Simply Sudoku Pro</em> with an <strong>Upgrade to Pro</strong> link that opens the Pro listing; that link, the same line in <strong>About</strong>, and a one-line note after a few Medium wins are the only places you’ll ever see it.</p>
+    <table>
+      <thead><tr><th></th><th>Free</th><th>Pro</th></tr></thead>
+      <tbody>
+        <tr><td>Levels</td><td>Easy, Medium</td><td>Easy, Medium, Hard, Expert</td></tr>
+        <tr><td>Today’s puzzle</td><td>Easy, Medium</td><td>All four levels</td></tr>
+        <tr><td>Custom (seeded) games</td><td>—</td><td>✓</td></tr>
+        <tr><td>Statistics</td><td>Streak tiles</td><td>Full page</td></tr>
+        <tr><td>Themes / board looks</td><td>2 / 3</td><td>10 / 12</td></tr>
+        <tr><td>Landscape play</td><td>—</td><td>✓</td></tr>
+        <tr><td>Allow screenshots</td><td>—</td><td>✓</td></tr>
+        <tr><td>Ads, accounts, tracking, subscriptions</td><td>None</td><td>None</td></tr>
+      </tbody>
+    </table>
+    <p>See the full comparison on the <a href="simple-sudoku.html#pro">Simply Sudoku page</a>.</p>
 
     <h2 id="keys">Keyboard shortcuts (Windows)</h2>
     <table>
@@ -303,6 +395,7 @@
       <div>
         <h4>Product</h4>
         <a href="simple-sudoku.html">Simply Sudoku</a>
+        <a href="simple-sudoku.html#pro">Free vs Pro</a>
         <a href="guide.html">Guide</a>
         <a href="simple-sudoku.html#get">Download</a>
         <a href="support.html">Support &amp; FAQ</a>

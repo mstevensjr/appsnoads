@@ -9,13 +9,13 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 |---|---|
 | `index.html` | Home / landing page (hero, philosophy, Simply Sudoku, screenshot gallery, download, donate). |
 | `simple-sudoku.html` | Product page for Simply Sudoku — feature tour with screenshots, download, donate. |
-| `guide.html` | User manual — "How to play Simply Sudoku": every feature explained (starting a game, entering numbers, sticky numbers, notes, hints, mistakes, check-when-ready mode, pausing &amp; resume-on-next-launch, themes/board looks, landscape, privacy, keyboard shortcuts). Linked in the top nav as **Guide**. |
+| `guide.html` | User manual — "How to play Simply Sudoku" (v1.7): the start panel, today's puzzle, custom games (Pro), entering numbers, sticky numbers, notes, hints, mistakes, check-when-ready mode, pausing &amp; continue, statistics, settings, themes/board looks, landscape (Pro), privacy, rating &amp; feedback, Free vs Pro, keyboard shortcuts. Linked in the top nav as **Guide**. |
 | `privacy.html` | Privacy Policy — **required** by Google Play and Apple. |
 | `support.html` | Support / FAQ / contact — used as the app stores' "support URL". |
 | `terms.html` | Terms of Use. |
 | `styles.css` | All styling (design system + responsive layout). |
 | `favicon.svg` | Site icon (the Sudoku mark). |
-| `screenshots/` | App screenshots used across the site (optimized JPEGs, ~540px wide). |
+| `screenshots/` | App screenshots used across the site. The v1.7 set (`start-panel*.png`, `daily.png`, `gameplay.png`, `sticky.png`, `hint.png`, `check-mode.png`, `settings.png`, `stats*.png`, `seeded-game.png`, `landscape.png`, `about.png`, `hard-locked.png`) are 420×900 PNG captures of the Win64 build; `board-looks.jpg`, `themes.jpg`, `look-paper.jpg` and `board-looks-grid.png` are older Android captures of the pickers (still accurate). |
 
 ## News page — two test versions (temporary, to compare & pick one)
 
@@ -76,11 +76,17 @@ old site first. The donation link already points at your Stripe checkout.
    href="#">` with a `SOON` badge, in `index.html` and `simple-sudoku.html`) —
    replace `href="#"` and delete the `<span class="soon">SOON</span>` when the
    Windows version ships.
+   **Simply Sudoku Pro** has no store buttons yet: the `#pro` section on
+   `simple-sudoku.html`, the `#get` intro copy on `index.html`/`simple-sudoku.html`
+   and the Pro FAQ on `support.html` all say it is "on its way". When the Pro
+   listings go live (Play package `com.appsnoads.simplysudoku_v1__pro`; the Apple
+   id is not known yet), add a second row of store buttons under `#get` and
+   replace those sentences.
 2. **Screenshots** — real app screenshots live in `screenshots/` and appear in
-   the hero, the home gallery, and the product-page feature tour. To refresh
-   them, replace the JPEGs (keep the same file names); ~540px wide keeps the
-   site fast. Consider re-capturing the About screen once you've built v1.2.0 so
-   its version label matches.
+   the hero, the home gallery, the product-page feature tour and the guide. The
+   v1.7 set was captured from the Win64 build (client area only, 420×900) with
+   the Sudoku repo's `tools\shot.ps1`-style harness; re-capture from a phone when
+   convenient (keep the file names; 420–540px wide keeps the site fast).
 3. **Contact email** — currently `mstevens@dqbbs.com` throughout. Change if you
    want a dedicated support address (e.g. `support@appsnoads.com`).
 4. **Copyright year / company name** — footer reads "© 2026 Apps No Ads".
@@ -100,6 +106,73 @@ https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605
 To change it, search-and-replace that URL across the `.html` files.
 
 ## Recent changes
+
+### 2026-09-11 — Simply Sudoku v1.7.0: start panel, daily puzzle, statistics, Free vs Pro
+The app's v1.7.0 release replaced the startup level picker with a start panel,
+added today's puzzle, custom (seeded) games, a statistics page, an in-app
+rate/feedback card, and split the product into a **free edition** and a
+**one-time-purchase Pro edition**. The site was brought in line everywhere it
+described the old behaviour.
+
+- **`screenshots/`** — removed the pre-1.7 captures that showed the retired UI
+  (`gameplay.jpg`, `features.jpg`, `difficulty.jpg` (old level picker),
+  `hint.jpg`, `settings.jpg`, `guide-check.png`, `guide-landscape.png`,
+  `guide-newdialog.png`, `guide-sticky.png`). Added 14 new 420×900 PNGs from the
+  v1.7.0 Win64 build: `start-panel.png` (Free), `start-panel-pro.png` (Pro, Expert
+  + seed "coffee"), `daily.png`, `gameplay.png`, `sticky.png`, `hint.png`,
+  `check-mode.png`, `settings.png`, `stats.png` (Pro), `stats-free.png`,
+  `seeded-game.png`, `landscape.png` (960×540), `about.png`, `hard-locked.png`.
+  Kept `board-looks.jpg`, `themes.jpg`, `look-paper.jpg`, `board-looks-grid.png`.
+- **`styles.css`** — new `.pro-badge` (amber "PRO" pill for headings) and
+  `.compare` table (the Free/Pro comparison: white card, centred ✓ columns,
+  `tfoot` note, tighter padding ≤560px). Appended after `.callout`.
+- **`simple-sudoku.html`** — meta/og descriptions mention the daily puzzle and
+  the Pro edition; hero copy + note ("Free, with a one-time Pro edition") and hero
+  image → `start-panel.png`; **feature tour rewritten** (9 rows: start panel,
+  today's puzzle, board, notes + sticky numbers, hints, statistics (Pro), custom
+  games (Pro), settings, themes/board looks with the Free/Pro split); board-looks
+  blurb notes "Free includes Classic, Midnight and High-Contrast; Pro has all
+  twelve"; **new `#pro` section** "Free stays free. Pro is paid once." with the
+  `.compare` table; promise band: "No subscriptions or paywalls" → "No
+  subscriptions — ever" + a sentence that Pro is bought once; `#get` intro says
+  Pro is on its way; support band now leads with "buy Simply Sudoku Pro" as the
+  way to support, donation second; feedback callout mentions the in-app ★ Rate →
+  Send feedback path.
+- **`index.html`** — hero image → `start-panel.png`; ethos list "No
+  subscriptions or paywalls" → "No subscriptions — a paid app is paid once"; the
+  Simply Sudoku blurb/bullets ("Four difficulties" → today's puzzle, sticky
+  numbers, Pro line); gallery re-cut to the new shots (start panel, daily, board,
+  hint, statistics, settings, board looks "(Pro; 3 free)", mix & match); `#get`
+  intro mentions Pro with a link to `simple-sudoku.html#pro`.
+- **`guide.html`** — rewritten for v1.7: contents list gained *The start panel*,
+  *Today's puzzle*, *Custom games*, *Statistics*, *Settings*, *Rating &
+  feedback*, *Free vs Pro*; **Starting a game** (level picker, "Ask me for a
+  level", "Don't warn on New") → **The start panel** with the card-by-card list
+  and the touched-game confirm rule; new **Today's puzzle**, **Custom games
+  (Pro)**, **Statistics**, **Settings** (the four rows + Apply), **Rating,
+  reviews & feedback** and **What's in Free, what's in Pro** sections;
+  **Pausing** now says an unfinished game is *always* saved and offered as
+  CONTINUE / the Welcome-back card (the "Resume interrupted game" switch is
+  gone); **Landscape** and **Allow screenshots** marked Pro; themes/board-looks
+  paragraph carries the 2/3 vs 10/12 split; every screenshot repointed.
+- **`support.html`** — FAQ: "really free?" answer no longer says "no paywalls"
+  and lists what Free includes; new entries *What is Simply Sudoku Pro*, *Will my
+  best times and statistics carry over*, *What is Today's puzzle*, *Where did the
+  level picker go*, *Does my unfinished game come back*, *How do I send feedback
+  from the app*; data/progress answers mention statistics and that custom games
+  never set a best time; "How can I support" adds "buy Simply Sudoku Pro".
+- **`privacy.html`** — Last updated → 11 September 2026; §2 local-data list adds
+  statistics and the rating-prompt counters, notes Reset statistics and that the
+  two editions are sandboxed apart; §4 lists the three user-started hand-offs
+  (store page, mail draft, Apple's built-in rating prompt); §5 renamed
+  *Donations and purchases* with a paragraph on Pro purchases through the stores.
+- **`terms.html`** — Last updated → 11 September 2026; §3 renamed *Donations and
+  paid editions* with a paragraph on the one-time Pro edition.
+- **`philosophy.html`** — donate band: "enjoy every part of the app" → "play the
+  free edition as much as you like", plus a paragraph tying Pro-bought-once to the
+  "software is goods" argument.
+- **All pages** — footer *Product* column gained **Free vs Pro** →
+  `simple-sudoku.html#pro`.
 
 ### 2026-09-01 — iOS launch: App Store links wired site-wide
 The iOS app went live as **"Simply Sudoku by AppsNoAds"**
