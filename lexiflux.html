@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18406479758"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18406479758');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LexiFlux — a word game with physics | Apps No Ads</title>
+<meta name="description" content="LexiFlux: letters fall like Tetris pieces, every letter has a weight, and each word you spell becomes a rigid bar on your tower. Today's puzzle is the same letters for everyone. No ads, no accounts, no tracking, fully offline. Free, with a one-time Pro edition for custom games.">
+<meta name="theme-color" content="#4c1d95">
+<link rel="icon" href="brand/mark-copper-64.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="LexiFlux — a word game with physics">
+<meta property="og:description" content="A word game with physics — spell words, stack them, keep the tower standing. No ads, no accounts, fully offline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://appsnoads.com/lexiflux.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Apps No Ads — home">
+      <img class="mark" src="brand/mark-copper-128.png" width="36" height="36" alt="">
+      <span class="wordmark">apps no ads</span>
+    </a>
+    <input type="checkbox" id="navToggle" class="nav-toggle" hidden>
+    <nav class="nav-links">
+      <a href="index.html#apps">Apps</a>
+      <a href="simple-sudoku.html">Simply Sudoku</a>
+      <a href="lexiflux.html">LexiFlux</a>
+      <a href="afm.html">AFM</a>
+      <a href="philosophy.html">Philosophy</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-review btn-sm" href="index.html#review" aria-label="Rate and review Simply Sudoku"><span class="star">★</span> Review</a>
+      <a class="btn btn-coffee btn-sm" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">☕ Coffee</a>
+      <label for="navToggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob"></div>
+  <div class="container">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:#d9c9ff">LexiFlux</p>
+      <h1>A word game<br><span class="grad">with physics.</span></h1>
+      <p>Letters fall like Tetris pieces, but every letter has a <strong>weight</strong> — Q is 10, E is 1. Spell a word and it fuses into a <strong>rigid bar</strong> that drops onto your tower. Bars stack, lean and topple according to where their mass sits. The goal: the tallest stable tower.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#features">How it plays</a>
+        <a class="btn btn-outline-light" href="#get">Get LexiFlux</a>
+      </div>
+      <p class="hero-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9bff0" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>Android · iOS · Windows · macOS &nbsp;·&nbsp; Coming soon &nbsp;·&nbsp; No ads, ever</span>
+      </p>
+    </div>
+    <div class="hero-visual">
+      <div class="device">
+        <img src="screenshots/lexiflux-portrait.png" width="480" height="1030" loading="eager"
+             alt="LexiFlux in portrait: the yard above, the chute with a falling R tile below, and the nine-slot bench.">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="container">
+    <p class="eyebrow center">How it plays</p>
+    <h2 class="center">Spell it. Place it. Keep it standing.</h2>
+
+    <div style="margin-top:52px">
+      <div class="feat">
+        <div>
+          <h3>The chute and the bench</h3>
+          <p>A tile falls down the <strong>chute</strong>; you steer it into a column and it lands in that slot on the nine-slot <strong>bench</strong>. You are spelling by placement — the column you drop a letter into is the column that letter will occupy forever. Letters don’t have to be side by side; gaps are fine, order still matters.</p>
+          <p>When the bench holds a valid word, lock it: the letters fuse into one bar and drop into the <strong>yard</strong> at exactly the columns you built them in. So you are choosing the word <em>and</em> where it lands.</p>
+        </div>
+        <div class="media"><div class="device"><img src="screenshots/lexiflux-portrait.png" width="480" height="1030" loading="lazy" alt="The LexiFlux board in portrait."></div></div>
+      </div>
+
+      <div class="feat rev">
+        <div>
+          <h3>Real physics, not a score table</h3>
+          <p>A bar’s mass is the sum of its letter weights, and its <strong>centre of mass</strong> is where that mass sits — so <em>QUIZ</em> leans hard towards its Q and Z while <em>EASE</em> balances dead centre. At every joint the combined mass of everything above must fall inside the bar below, or the tower goes over from that joint up.</p>
+          <p>Before you commit, a <strong>ghost</strong> shows exactly where the word would land — green stands, amber leans, red topples. The lean meter in the HUD is the tower’s worst joint; the plumb line is its overall centre of mass. Arrows beside the ghost nudge the bar one column either way — enough to save a topple, not enough to place it anywhere you like.</p>
+        </div>
+        <div class="media"><img src="screenshots/lexiflux-landscape.png" width="1000" height="662" loading="lazy" alt="LexiFlux in landscape: the chute and bench on the left, the yard on the right." style="border-radius:14px;border:1px solid var(--line);box-shadow:var(--shadow)"></div>
+      </div>
+
+      <div class="feat">
+        <div>
+          <h3>The tension</h3>
+          <p>Longer words score more (mass × length, plus a bonus per bar already standing) but they overhang more and swing the centre of mass further. Heavy letters pay well and destabilise badly. Short, light words are safe and cheap.</p>
+          <p><strong>Pace pays too.</strong> Every word’s score is multiplied by how fast its tile was falling — the chute tightens as you bank words, and you can set the opening fall, the fastest it gets and how much faster each word makes it. Play a daily on a faster setting and it scores higher; slow the chute to make it easy and the points fall to match.</p>
+        </div>
+        <div class="media"><div class="device"><img src="screenshots/lexiflux-newgame.png" width="406" height="891" loading="lazy" alt="The LexiFlux new-game panel: Today's Puzzle, Free Play, Custom Game with a seed box, About, and your best scores."></div></div>
+      </div>
+
+      <div class="feat rev">
+        <div>
+          <h3>Today’s puzzle — the same letters for everyone</h3>
+          <p>One set of letters a day, dealt in the same order to everybody who plays it, so two scores are worth comparing — the difference is entirely what you built. It’s replayable, and the day’s best is what is kept. <strong>Free play</strong> deals a fresh set of letters every game, and your best score and tallest tower are kept for each mode separately.</p>
+          <p>The dealer is smarter than a shuffled bag: at most two vowels or three consonants in a row, one heavy letter pending at a time, no Q without a U on the way — so you never get a bench you can’t play.</p>
+        </div>
+        <div class="media"><div class="device"><img src="screenshots/lexiflux-newgame.png" width="406" height="891" loading="lazy" alt="Choosing Today's Puzzle or Free Play."></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRO -->
+<section class="section section-soft" id="pro">
+  <div class="container center">
+    <p class="eyebrow">Free and Pro</p>
+    <h2>LexiFlux is free. LexiFlux Pro adds custom games.</h2>
+    <p class="lead center" style="margin:0 auto;max-width:62ch">Both editions have today’s puzzle, free play, the full physics and every setting — no ads, no accounts, nothing to unlock inside the app. <strong>LexiFlux Pro</strong> is a separate edition, <strong>paid once</strong>, and it keeps the free one free.</p>
+    <table class="compare">
+      <thead><tr><th>What you get</th><th>LexiFlux<br><small>free</small></th><th>LexiFlux Pro<br><small>one-time</small></th></tr></thead>
+      <tbody>
+        <tr><td>Today’s puzzle — the same letters for everyone</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>Free play, best score and tallest tower per mode</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>The physics, the ghost, the nudge, the pace settings</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>How-to-play sheet, haptics on a phone</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>No ads, no accounts, no tracking, fully offline</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td><strong>Custom games</strong> — any number, or any word, deals the same letters every time; replay a game or hand it to a friend as “play MIKE”</td><td class="no">—</td><td class="yes">✓</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="3">Seeded games set no records, so a custom game can’t bury a daily. The HUD shows the seed and the panel offers it back afterwards.</td></tr></tfoot>
+    </table>
+  </div>
+</section>
+
+<!-- NO ADS BAND -->
+<section class="ethos section">
+  <div class="container">
+    <p class="eyebrow" style="color:#c9a6ff">The promise</p>
+    <h2>No ads. No accounts. No tracking.</h2>
+    <p class="lead">LexiFlux works completely offline. Nothing is posted anywhere, there is no leaderboard and no login — the daily puzzle is compared out loud, with a friend. The only thing the game ever asks for is permission to buzz your phone when the tower moves, and that never prompts.</p>
+    <ul class="ticklist">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> No advertisements</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> No subscriptions — ever</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> No in-app purchases</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> No accounts or sign-ups</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> No analytics or tracking</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Works fully offline</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Redraws only when something moves — kind to your battery</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> One codebase: Android, iOS, Windows, macOS</li>
+    </ul>
+  </div>
+</section>
+
+<!-- GET -->
+<section class="section section-soft" id="get">
+  <div class="container center">
+    <p class="eyebrow">Download</p>
+    <h2>Get LexiFlux</h2>
+    <p class="lead center" style="margin:0 auto 32px">LexiFlux is in its final stretch — playable on Windows and running on Android today. Store links for <strong>LexiFlux</strong> and <strong>LexiFlux Pro</strong> will appear here as each store approves them.</p>
+    <div class="stores">
+      <a class="store" href="#" aria-label="Google Play (coming soon)">
+        <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M3.6 2.3 13 12 3.6 21.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1zM14.7 13.7l2.6 2.6-9.9 5.6zM17.3 7.7l-2.6 2.6-7.3-8.2zM18.4 10.8l2.7 1.5c.6.4.6 1.4 0 1.8l-2.7 1.5L15.5 13z"/></svg>
+        <span><span class="l1">Coming soon on</span><span class="l2">Google Play</span></span>
+        <span class="soon">SOON</span>
+      </a>
+      <a class="store" href="#" aria-label="App Store (coming soon)">
+        <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.4 12.9c0-2 1.6-3 1.7-3-.9-1.3-2.3-1.5-2.8-1.6-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.6-1.3 0-2.4.7-3.1 1.9-1.3 2.3-.3 5.7 1 7.5.6.9 1.4 1.9 2.4 1.9 1 0 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-.9 2.3-1.8c.7-1 1-2 1-2-.1 0-1.8-.7-1.8-2.8zM14.6 6.2c.5-.6.9-1.5.8-2.4-.8 0-1.7.5-2.3 1.2-.5.5-.9 1.4-.8 2.3.9.1 1.7-.5 2.3-1.1z"/></svg>
+        <span><span class="l1">Coming soon on the</span><span class="l2">App Store</span></span>
+        <span class="soon">SOON</span>
+      </a>
+      <a class="store" href="#" aria-label="Microsoft Store (coming soon)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8.5" height="8.5" fill="#f25022"/><rect x="12.5" y="3" width="8.5" height="8.5" fill="#7fba00"/><rect x="3" y="12.5" width="8.5" height="8.5" fill="#00a4ef"/><rect x="12.5" y="12.5" width="8.5" height="8.5" fill="#ffb900"/></svg>
+        <span><span class="l1">Coming soon on</span><span class="l2">Microsoft Store</span></span>
+        <span class="soon">SOON</span>
+      </a>
+    </div>
+    <p class="muted" style="margin:24px auto 0;max-width:60ch;font-size:.95rem">Want to know the moment it ships? <a href="mailto:mstevens@dqbbs.com?subject=LexiFlux%20launch">Send a quick email</a> and you’ll get one reply when it’s live — nothing else, no list.</p>
+  </div>
+</section>
+
+<!-- COFFEE -->
+<section class="section" id="coffee">
+  <div class="container">
+    <div class="coffee-band">
+      <div class="coffee-cup" aria-hidden="true">☕</div>
+      <p class="eyebrow">Enjoying the apps?</p>
+      <h2>Buy the author a coffee</h2>
+      <p>LexiFlux, like every Apps No Ads app, is made by one person with no ads to pay for it. If it’s fun, a coffee is a lovely way to say thanks — never required, and nothing is locked behind it. It helps cover the programming tools, app-store fees and hosting that keep this software ad-free.</p>
+      <a class="btn btn-coffee" style="margin-top:8px;font-size:1.08rem" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">☕ Buy the author a coffee</a>
+      <p class="muted" style="margin:14px 0 0;font-size:.9rem">Any amount, one time, via Stripe. No strings attached.</p>
+      <div class="callout" style="margin-top:1.4rem;text-align:left">
+        <strong>Feedback welcome.</strong> LexiFlux collects nothing about you, so there’s no way to reach you first — a word the game rejected, an idea, a bug, or just a kind word: <a href="mailto:mstevens@dqbbs.com?subject=LexiFlux%20feedback">mstevens@dqbbs.com</a>. Every message gets read.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="brand/lockup-wordmark-light.png" alt="apps no ads — quiet by design." height="48">
+        </div>
+        <p style="max-width:34ch">Distraction-free, useful software from <strong>Apps No Ads</strong> — no ads, no subscriptions, no tracking. Just simple apps, the way they should be.</p>
+        <a class="btn btn-coffee btn-sm" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">☕ Coffee</a>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="simple-sudoku.html">Simply Sudoku</a>
+        <a href="simple-sudoku.html#pro">Free vs Pro</a>
+        <a href="lexiflux.html">LexiFlux</a>
+        <a href="afm.html">Another File Manager</a>
+        <a href="index.html#get">Download</a>
+        <a href="index.html#review">★ Rate &amp; review</a>
+        <a href="index.html#why">Why no ads</a>
+        <a href="support.html">Support &amp; FAQ</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="philosophy.html">Philosophy</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:mstevens@dqbbs.com">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Melvin Stevens · Apps No Ads. All rights reserved.</span>
+      <span>No third-party fonts. During our Simply Sudoku launch the site uses a temporary Google Ads tag for promotion only &mdash; no user-specific data is kept (see our Privacy Policy).</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

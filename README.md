@@ -7,14 +7,18 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home / landing page (hero, philosophy, Simply Sudoku, screenshot gallery, download, donate). |
-| `simple-sudoku.html` | Product page for Simply Sudoku — feature tour with screenshots, download, donate. |
+| `index.html` | Home — the **Apps No Ads apps page**: brand hero, the five app cards (Simply Sudoku, Simply Sudoku Pro, LexiFlux, LexiFlux Pro, Another File Manager), trust bar, philosophy, rate & review, buy-the-author-a-coffee. |
+| `simple-sudoku.html` | Product page for Simply Sudoku (+ the `#pro` Free/Pro comparison) — feature tour with screenshots, download, coffee. |
+| `lexiflux.html` | Product page for LexiFlux (+ `#pro` LexiFlux Pro) — how it plays, the physics, today's puzzle, "coming soon" store buttons. |
+| `afm.html` | Product page for Another File Manager (AFM) — feature cards, live screenshot, "in development / ask for an early build". |
+| `brand/` | The Apps No Ads mark and lockups, copied from `Dev\Branding\AppsNoAds` (never redraw): `mark-copper-64/128/256.png`, `lockup-wordmark.png`, `lockup-wordmark-light.png`, `tile-dark.png`. `mark-copper-64.png` is the favicon. |
+| `apps/` | App icons for the home-page cards: `simply-sudoku.png` (256, from `Sudoku\icon\sudoku_icon_1024.png`), `lexiflux.png` (192, `LexiFlux\docs\icon.png`), `afm.png` (128, from `AFM\AFileManagerV\AFMV_Icon.ico`). |
 | `guide.html` | User manual — "How to play Simply Sudoku" (v1.7): the start panel, today's puzzle, custom games (Pro), entering numbers, sticky numbers, notes, hints, mistakes, check-when-ready mode, pausing &amp; continue, statistics, settings, themes/board looks, landscape (Pro), privacy, rating &amp; feedback, Free vs Pro, keyboard shortcuts. Linked in the top nav as **Guide**. |
 | `privacy.html` | Privacy Policy — **required** by Google Play and Apple. |
 | `support.html` | Support / FAQ / contact — used as the app stores' "support URL". |
 | `terms.html` | Terms of Use. |
 | `styles.css` | All styling (design system + responsive layout). |
-| `favicon.svg` | Site icon (the Sudoku mark). |
+| `favicon` | now `brand/mark-copper-64.png` (the old `favicon.svg` Sudoku grid was removed). |
 | `screenshots/` | App screenshots used across the site. The v1.7 set (`start-panel*.png`, `daily.png`, `gameplay.png`, `sticky.png`, `hint.png`, `check-mode.png`, `settings.png`, `stats*.png`, `seeded-game.png`, `landscape.png`, `about.png`, `hard-locked.png`) are 420×900 PNG captures of the Win64 build; `board-looks.jpg`, `themes.jpg`, `look-paper.jpg` and `board-looks-grid.png` are older Android captures of the pickers (still accurate). |
 
 ## News page — two test versions (temporary, to compare & pick one)
@@ -94,9 +98,11 @@ old site first. The donation link already points at your Stripe checkout.
    apps actually behave (no data collected). Review them, and have a professional
    look them over if you want extra assurance for the stores.
 
-## The donation link
+## The "buy the author a coffee" link
 
-The Stripe checkout is wired throughout (nav, hero, donate section, footer,
+The Stripe checkout is the honour-system tip jar, worded everywhere as **"Buy the
+author a coffee"** (`☕ Coffee` on the top bar and in footers; `.btn-coffee`,
+`.coffee-band`). It is wired throughout (nav, hero, coffee section, footer,
 support page):
 
 ```
@@ -106,6 +112,53 @@ https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605
 To change it, search-and-replace that URL across the `.html` files.
 
 ## Recent changes
+
+### 2026-09-12 — Apps No Ads apps site: brand mark, "buy the author a coffee", five apps
+Three changes asked for together: put the Apps No Ads logo on the pages, turn
+every "Donate" into a buy-the-author-a-coffee sentiment, and make the site an
+Apps No Ads *apps* site rather than a Simply Sudoku site.
+
+- **Brand** — new `brand/` folder (copied from `Dev\Branding\AppsNoAds`, see
+  its `BRAND.md`). Every page's header `.brand` is now the copper mark
+  (`mark-copper-128.png` at 36px) + the lower-case wordmark **apps no ads**
+  (`.brand .mark`, `.brand .wordmark` in `styles.css`) instead of the violet
+  Sudoku-grid SVG + "AppsNoAds". Every footer `.footer-brand` is
+  `lockup-wordmark-light.png` (mark + wordmark + QUIET BY DESIGN., 48px high).
+  The favicon is `brand/mark-copper-64.png` (`favicon.svg` deleted). The home
+  hero shows `mark-copper-256.png` with the tagline (`.hero-brand`). Palette
+  vars `--copper`, `--copper-dark`, `--charcoal`, `--ivory` added.
+- **Coffee** — `.btn-donate` → `.btn-coffee` (copper gradient, ivory text) and
+  `.donate-band` → `.coffee-band` (warm cream, brown headings, `.coffee-cup`
+  emoji) in `styles.css` and every page incl. the news-trial pages. Buttons:
+  `♥ Donate` → `☕ Coffee` (nav/footer), `♥ Make a donation` / `♥ Support the
+  work` → `☕ Buy the author a coffee`. Copy: the support bands on `index`,
+  `simple-sudoku`, `philosophy` (and the new pages) are now "Enjoying the apps?
+  / Buy the author a coffee — made by one person, with no ads to pay for it;
+  never required, nothing locked behind it"; review-band eyebrow "bigger than a
+  donation" → "bigger than a coffee"; `support.html` FAQ answers say "buy the
+  author a coffee"; `privacy.html` §5 and `terms.html` §3 are retitled
+  "“Buy the author a coffee” (donations) …" and keep the legal word *donation*
+  in the body.
+- **Apps site** — `index.html` body rewritten: hero (brand mark instead of a
+  Sudoku screenshot), **`#apps` card grid** (`.app-grid` / `.app-card` with icon,
+  kind, blurb, status badge live/soon/dev and platform chips) for Simply Sudoku,
+  Simply Sudoku Pro, LexiFlux, LexiFlux Pro and Another File Manager; the trust
+  bar, philosophy band (with a link to the philosophy page), a generalised
+  review band ("rate & review the apps you use", Sudoku store buttons, note that
+  LexiFlux/AFM links come when they ship) and the coffee band. The Sudoku
+  screenshot gallery and Sudoku download section left the home page (they live
+  on `simple-sudoku.html`). New **`lexiflux.html`** (hero, four feature rows from
+  `LexiFlux\README.md`, `#pro` comparison table, promise band, SOON store
+  buttons, coffee + feedback) and **`afm.html`** (centred hero, live screenshot,
+  nine feature cards from `AFM\AFileManagerV\README.md` v1.6, "in development /
+  ask for an early build", coffee). Screenshots added: `lexiflux-portrait.png`,
+  `lexiflux-newgame.png`, `lexiflux-landscape.png` (from `LexiFlux\docs`),
+  `afm.jpg` (1200px capture of the running AFMV window). Nav on every page:
+  **Apps · Simply Sudoku · LexiFlux · AFM · Philosophy · Support · Privacy**
+  (Guide and Why-no-ads moved to footer/product page). Footer Product column
+  gained LexiFlux and Another File Manager. `support.html` gained a "When are
+  LexiFlux and AFM coming out?" FAQ and its wording is app-neutral.
+- `index.html` `<title>`/descriptions name the three apps.
 
 ### 2026-09-11 — Simply Sudoku v1.7.0: start panel, daily puzzle, statistics, Free vs Pro
 The app's v1.7.0 release replaced the startup level picker with a start panel,

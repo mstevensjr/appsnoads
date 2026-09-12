@@ -16,7 +16,7 @@
 <title>Simply Sudoku — just the puzzle, no ads | Apps No Ads</title>
 <meta name="description" content="Simply Sudoku: unique puzzles with exactly one solution, a daily puzzle that's the same for everyone, notes, hints, undo and best times — no ads, no accounts, no tracking, fully offline. Free, with a one-time Pro edition for Hard and Expert, custom games and statistics.">
 <meta name="theme-color" content="#4c1d95">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="brand/mark-copper-64.png" type="image/png">
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Simply Sudoku — just the puzzle, no ads">
 <meta property="og:description" content="Unique puzzles with exactly one solution, a daily puzzle for everyone, notes, hints and best times. No ads, no accounts, no tracking, fully offline.">
@@ -28,21 +28,22 @@
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="Apps No Ads — home">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#6d28d9"/><g stroke="rgba(255,255,255,.9)" stroke-width="2.5" fill="none"><rect x="14" y="14" width="36" height="36" rx="3"/><line x1="26" y1="14" x2="26" y2="50"/><line x1="38" y1="14" x2="38" y2="50"/><line x1="14" y1="26" x2="50" y2="26"/><line x1="14" y1="38" x2="50" y2="38"/></g><text x="20" y="24.5" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">5</text><text x="44" y="48.5" font-size="10" font-weight="700" fill="#f5a623" text-anchor="middle">3</text></svg>
-      <span>Apps<span class="brand-accent">No</span>Ads</span>
+      <img class="mark" src="brand/mark-copper-128.png" width="36" height="36" alt="">
+      <span class="wordmark">apps no ads</span>
     </a>
     <input type="checkbox" id="navToggle" class="nav-toggle" hidden>
     <nav class="nav-links">
+      <a href="index.html#apps">Apps</a>
       <a href="simple-sudoku.html">Simply Sudoku</a>
-      <a href="guide.html">Guide</a>
-      <a href="index.html#why">Why no ads</a>
+      <a href="lexiflux.html">LexiFlux</a>
+      <a href="afm.html">AFM</a>
       <a href="philosophy.html">Philosophy</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
     </nav>
     <div class="nav-actions">
       <a class="btn btn-review btn-sm" href="#review" aria-label="Rate and review Simply Sudoku"><span class="star">★</span> Review</a>
-      <a class="btn btn-donate btn-sm" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">♥ Donate</a>
+      <a class="btn btn-coffee btn-sm" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">☕ Coffee</a>
       <label for="navToggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
     </div>
   </div>
@@ -142,7 +143,7 @@
           <h3>Your game, your rules</h3>
           <p>A short settings page with a one-line explanation for each switch — highlight wrong numbers, start a game right away at launch (skipping the start panel), your preferred level, and on Pro, allow screenshots — and that’s it. Nothing applies until you tap <strong>Apply</strong>. A game timer and per-level best times give you something to beat, and everything is saved privately on your device.</p>
         </div>
-        <div class="media"><div class="device"><img src="screenshots/settings.png" width="420" height="900" loading="lazy" alt="Settings: Highlight wrong numbers in red, Start a game right away at launch, the level pills, and Cancel / Apply."></div></div>
+        <div class="media"><div class="device"><img src="screenshots/settings.png" width="420" height="900" loading="lazy" alt="Settings: Highlight wrong numbers in red, Start a game right away at launch, the level pills, and ’cel / Apply."></div></div>
       </div>
 
       <div class="feat">
@@ -249,7 +250,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.6-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.4 4.7 1.6 7.1z"/></svg>
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.6-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.4 4.7 1.6 7.1z"/></svg>
       </div>
-      <p class="eyebrow">The #1 way to help — bigger than a donation</p>
+      <p class="eyebrow">The #1 way to help — bigger than a coffee</p>
       <h2>Please rate &amp; review Simply Sudoku</h2>
       <p class="lead-review">A quick rating and review is the single most powerful thing you can do to help — and it’s completely free.</p>
       <p>Simply Sudoku has <strong>no ads and no advertising budget</strong>. It can’t pay to appear on the app stores — it only gets noticed when players like you leave a review. Every rating pushes it higher in search, helps new people discover an honest, ad-free game, and keeps it growing <strong>without spending a cent on ads</strong>. Great reviews <em>are</em> our advertising.</p>
@@ -276,15 +277,16 @@
 <!-- SUPPORT / DONATE / FEEDBACK -->
 <section class="section" id="support">
   <div class="container">
-    <div class="donate-band">
-      <p class="eyebrow" style="color:var(--amber-dark)">Support the work</p>
-      <h2>Free, and free of hassle. Help keep it that way.</h2>
+    <div class="coffee-band" id="coffee">
+      <div class="coffee-cup" aria-hidden="true">☕</div>
+      <p class="eyebrow">Enjoying Simply Sudoku?</p>
+      <h2>Buy the author a coffee</h2>
       <p>A lot of apps lure you in with the word <em>“free,”</em> then charge you to remove the ads, or nag you until you pay to make it stop. <strong>Simply Sudoku will never do that</strong> — no ads, no in-app purchases, no pop-ups begging for money. It’s free, and it stays free.</p>
-      <p>The best way to support the work is simple: if you’d like Hard and Expert, custom games, the full statistics page and every theme, <a href="#pro">buy Simply Sudoku Pro</a> — one small payment, no subscription. Prefer to stay on the free edition? A small donation is just as welcome. Neither is required and never will be — they cover the programming tools, app-store fees, and hosting that keep Simply Sudoku free and ad-free for everyone.</p>
-      <a class="btn btn-donate" style="margin-top:8px;font-size:1.08rem" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">♥ Make a donation</a>
-      <p class="muted" style="margin:14px 0 0;font-size:.9rem">Secure payment via Stripe. One-time, no strings attached.</p>
+      <p>If it’s become part of your day, a coffee is a lovely way to say thanks. It isn’t required and never will be — it simply helps cover the programming tools, app-store fees, and hosting that keep Simply Sudoku free and ad-free for everyone. Rather buy something you can keep? <a href="#pro">Simply Sudoku Pro</a> is paid once and owned forever.</p>
+      <a class="btn btn-coffee" style="margin-top:8px;font-size:1.08rem" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">☕ Buy the author a coffee</a>
+      <p class="muted" style="margin:14px 0 0;font-size:.9rem">Any amount, one time, via Stripe. No strings attached.</p>
 
-      <p style="margin-top:1.7rem">Can’t donate right now? <strong>No problem at all.</strong> You can help just as much for free: please <strong>leave a review</strong>, <strong>tell others</strong> about the app, and <strong>spread the word</strong> about Simply Sudoku. And if it brightened a few minutes of your day, a quick note to say so is always welcome.</p>
+      <p style="margin-top:1.7rem">No coffee money to spare? <strong>No problem at all.</strong> You can help just as much for free: please <strong>leave a review</strong>, <strong>tell others</strong> about the app, and <strong>spread the word</strong> about Simply Sudoku. And if it brightened a few minutes of your day, a quick note to say so is always welcome.</p>
 
       <div class="callout" style="margin-top:1.2rem">
         <strong>All feedback is welcome.</strong> Simply Sudoku does not collect <em>any</em> information about you, so there’s no way to reach you first — if you have a suggestion, a bug to report, or just a kind word, please send an email. In the app, tap <strong>★ Rate</strong> and then <strong>Send feedback</strong> — it drafts the message in your own mail app, with the app version filled in. Every message gets read.<br>
@@ -293,7 +295,7 @@
 
       <div class="hero-cta" style="margin-top:1.4rem">
         <a class="btn btn-primary" href="mailto:mstevens@dqbbs.com?subject=Simply%20Sudoku%20feedback">Send feedback</a>
-        <a class="btn btn-donate" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">♥ Donate</a>
+        <a class="btn btn-coffee" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">☕ Coffee</a>
       </div>
     </div>
   </div>
@@ -305,16 +307,17 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#6d28d9"/><g stroke="rgba(255,255,255,.9)" stroke-width="2.5" fill="none"><rect x="14" y="14" width="36" height="36" rx="3"/><line x1="26" y1="14" x2="26" y2="50"/><line x1="38" y1="14" x2="38" y2="50"/><line x1="14" y1="26" x2="50" y2="26"/><line x1="14" y1="38" x2="50" y2="38"/></g></svg>
-          Apps<span style="color:#f5a623">No</span>Ads
+          <img src="brand/lockup-wordmark-light.png" alt="apps no ads — quiet by design." height="48">
         </div>
         <p style="max-width:34ch">Distraction-free, useful software from <strong>Apps No Ads</strong> — no ads, no subscriptions, no tracking.</p>
-        <a class="btn btn-donate btn-sm" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">♥ Donate</a>
+        <a class="btn btn-coffee btn-sm" href="https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605" target="_blank" rel="noopener">☕ Coffee</a>
       </div>
       <div>
         <h4>Product</h4>
         <a href="simple-sudoku.html">Simply Sudoku</a>
         <a href="simple-sudoku.html#pro">Free vs Pro</a>
+        <a href="lexiflux.html">LexiFlux</a>
+        <a href="afm.html">Another File Manager</a>
         <a href="simple-sudoku.html#get">Download</a>
         <a href="simple-sudoku.html#review">★ Rate &amp; review</a>
         <a href="index.html#why">Why no ads</a>
