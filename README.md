@@ -8,7 +8,8 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 | File | Purpose |
 |---|---|
 | `index.html` | Home — the **Apps No Ads apps page**: brand hero, the five app cards (Simply Sudoku, Simply Sudoku Pro, LexiFlux, LexiFlux Pro, Another File Manager), trust bar, philosophy, rate & review, buy-the-author-a-coffee. |
-| `simple-sudoku.html` | Product page for Simply Sudoku (+ the `#pro` Free/Pro comparison) — feature tour with screenshots, download, coffee. |
+| `sudoku.html` | **Product page for Sudoku by ANA and Sudoku Pro by ANA** (2.0.0, the rebrand of Simply Sudoku; branch `sudoku-by-ana`, 2026-10-31) — hero, a "Simply Sudoku is now Sudoku by ANA" note, feature tour (start panel, daily, notes and hints, Killer and Samurai, collections and codes, statistics), the `#pro` Free/Pro table, the promise, **SOON** store buttons for all four listings (links in TODO comments until the listings exist), review, coffee. New screenshots `screenshots/ana-start-pro.png`, `ana-samurai.png`, `ana-killer.png` (420 x 900, Win64 2.0.0). |
+| `simple-sudoku.html` | Product page for Simply Sudoku as it was (v1.9.0, + the `#pro` table); since 2026-10-31 a note at the top points to `sudoku.html`. The nav and footers on every page now link **Sudoku** → `sudoku.html` (was **Simply Sudoku** → `simple-sudoku.html`), and the home cards are *Sudoku by ANA* / *Sudoku Pro by ANA*. |
 | `lexiflux.html` | Product page for LexiFlux (+ `#pro` LexiFlux Pro) — how it plays, the physics, today's puzzle, "coming soon" store buttons. |
 | `crosswords.html` | Product page for Crosswords by Apps No Ads — generated-offline puzzles, four feature rows, promise band, SOON buttons (App Store, Microsoft Store, Linux). |
 | `afm.html` | Product page for Another File Manager (AFM) — feature cards, live screenshot, "in development / ask for an early build". |
