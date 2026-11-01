@@ -30,9 +30,11 @@ needs the internet.
 - **Collections**, the **daily archive**, full statistics and history, certificates, every theme and board look.
 
 ### Coming from Simply Sudoku
-Sudoku by ANA is a new app in the stores, so it starts with a fresh history; Simply Sudoku keeps yours for as long as
-it stays installed, and its last update points to the new apps. From here on, moving is easy: **Settings → Export my
-data** in Sudoku by ANA, then **Import** in Sudoku Pro by ANA (or on a new phone) brings every game along.
+Sudoku by ANA is a new app in the stores, but your record comes with you: Simply Sudoku's last update has a
+**Bring my games along** button. Tap it there, then **Settings → Import** in Sudoku by ANA, and your best times,
+statistics and unfinished game arrive. (Simply Sudoku never kept a list of past games, so there is none to bring.)
+From here on, moving is easy: **Settings → Export my data** in Sudoku by ANA, then **Import** in Sudoku Pro by ANA
+(or on a new phone) brings every game along.
 
 ### Get it
 - Sudoku by ANA — Google Play · App Store *(links when live)*
