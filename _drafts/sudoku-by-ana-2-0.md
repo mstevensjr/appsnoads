@@ -33,8 +33,8 @@ needs the internet.
 Sudoku by ANA is a new app in the stores, but your record comes with you: Simply Sudoku's last update has a
 **Bring my games along** button. Tap it there, then **Settings → Import** in Sudoku by ANA, and your best times,
 statistics and unfinished game arrive. (Simply Sudoku never kept a list of past games, so there is none to bring.)
-From here on, moving is easy: **Settings → Export my data** in Sudoku by ANA, then **Import** in Sudoku Pro by ANA
-(or on a new phone) brings every game along.
+From here on, moving is easy: **Settings → Take my games to Pro** in Sudoku by ANA, then **Import** in Sudoku Pro by
+ANA brings every game along (backups between devices are part of Pro).
 
 ### Get it
 - Sudoku by ANA — Google Play · App Store *(links when live)*
