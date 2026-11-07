@@ -217,7 +217,7 @@ img { max-width: 100%; display: block; }
 .app-card .meta { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .app-card .plat { font-size: .8rem; color: var(--body); background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-weight: 600; }
 .app-card .status { font-size: .78rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; border-radius: 999px; padding: 3px 10px; }
-.app-card .status.live { background: #e6f6ec; color: #1e8e3e; }
+.app-card .status.live { background: #e6f6ec; color: #17733a; }
 .app-card .status.soon { background: #fdf0d9; color: #9a5b00; }
 .app-card .status.dev  { background: #eee9fb; color: var(--violet-dark); }
 .app-card .more { margin-top: 14px; color: var(--violet); font-weight: 700; }
@@ -326,7 +326,7 @@ figure.shotfig figcaption { color: var(--muted); font-size: .9rem; margin-top: .
 .compare thead th { background: var(--bg-soft); color: var(--ink); font-weight: 800; }
 .compare thead th:not(:first-child), .compare td:not(:first-child) { text-align: center; width: 24%; }
 .compare td:first-child { color: var(--ink); font-weight: 600; }
-.compare .yes { color: #1e8e3e; font-weight: 800; }
+.compare .yes { color: #17733a; font-weight: 800; }
 .compare .no { color: var(--muted); }
 .compare tfoot td { background: var(--bg-soft); color: var(--body); font-size: .9rem; text-align: left; }
 @media (max-width: 560px) {
@@ -385,3 +385,52 @@ figure.shotfig figcaption { color: var(--muted); font-size: .9rem; margin-top: .
     padding-bottom: 12px; -webkit-overflow-scrolling: touch; }
   .shot { flex: 0 0 68%; scroll-snap-align: center; }
 }
+
+/* ---------- Sudoku 2.0.0 galleries, the lightbox, the guide's pictures (2026-11-06) ---------- */
+.gallery-head { margin-top: 64px; }
+.gallery-head:first-of-type { margin-top: 40px; }
+.gallery-head p { max-width: 64ch; }
+.ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 22px 16px; margin-top: 22px; }
+.ggrid.wide { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.gshot { margin: 0; text-align: center; }
+.gshot a { display: block; border-radius: 14px; }
+.gshot a:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
+.gshot img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 8px 22px rgba(46,16,101,.10); background: var(--bg-soft); }
+.gshot figcaption { margin-top: .55rem; font-size: .9rem; line-height: 1.35; color: var(--body); }
+.gshot figcaption strong { display: block; color: var(--ink); font-size: .95rem; }
+.hero .device picture img, .feat .device picture img { display: block; width: 100%; height: auto; border-radius: 22px; }
+.free-pro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; text-align: left; }
+.free-pro-grid .card ul { padding-left: 1.1rem; margin: .6rem 0 0; }
+.free-pro-grid .card li { margin-bottom: .35rem; }
+.store.store-soon { cursor: default; opacity: .78; }
+.store.store-soon:hover { transform: none; }
+/* the lightbox (lightbox.js): a native <dialog>, Escape closes it */
+dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 96vh; overflow: visible; }
+dialog.lightbox::backdrop { background: rgba(10, 8, 20, .86); }
+dialog.lightbox figure { margin: 0; text-align: center; }
+dialog.lightbox img { max-width: 92vw; max-height: 84vh; width: auto; height: auto; margin: 0 auto; border-radius: 12px; background: #fff; }
+dialog.lightbox figcaption { color: #f1edff; margin-top: .6rem; font-size: .95rem; }
+dialog.lightbox button { position: fixed; border: 0; border-radius: 999px; width: 48px; height: 48px; font-size: 1.9rem; line-height: 1;
+  background: rgba(255,255,255,.16); color: #fff; cursor: pointer; }
+dialog.lightbox button:hover, dialog.lightbox button:focus-visible { background: rgba(255,255,255,.32); outline: 2px solid #fff; }
+dialog.lightbox .lb-close { top: 14px; right: 14px; }
+dialog.lightbox .lb-prev { left: 12px; top: 50%; transform: translateY(-50%); }
+dialog.lightbox .lb-next { right: 12px; top: 50%; transform: translateY(-50%); }
+/* the guide: a picture beside each section on a wide screen, above it on a phone */
+figure.shotfig.side { float: right; width: 220px; margin: .3rem 0 1.2rem 1.6rem; }
+figure.shotfig.side img { max-width: 100%; }
+figure.shotfig.side.land { width: 340px; }
+.prose h2 { clear: both; }
+@media (max-width: 760px) {
+  figure.shotfig.side, figure.shotfig.side.land { float: none; width: auto; max-width: 300px; margin: 1rem auto 1.4rem; }
+  .free-pro-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .ggrid { grid-template-columns: repeat(2, 1fr); gap: 18px 12px; }
+  .ggrid.wide { grid-template-columns: 1fr; }
+}
+/* the home page's Sudoku cards: a capture under the text */
+.app-card .card-shot { width: 100%; height: 210px; object-fit: cover; object-position: top; border-radius: 12px; border: 1px solid var(--line); margin: 0 0 14px; }
+
+/* phones under 420 px: the logo alone, so Review, Coffee and the menu fit on the bar (2026-11-06) */
+@media (max-width: 420px) { .brand .wordmark { display: none; } }

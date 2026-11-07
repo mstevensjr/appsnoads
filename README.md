@@ -7,21 +7,22 @@ no trackers, no cookies, no third-party fonts — just HTML + one CSS file.
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home — the **Apps No Ads apps page**: brand hero, the five app cards (Simply Sudoku, Simply Sudoku Pro, LexiFlux, LexiFlux Pro, Another File Manager), trust bar, philosophy, rate & review, buy-the-author-a-coffee. |
-| `sudoku.html` | **Product page for Sudoku by ANA and Sudoku Pro by ANA** (2.0.0, the rebrand of Simply Sudoku; branch `sudoku-by-ana`, 2026-10-31) — hero, a "Simply Sudoku is now Sudoku by ANA" note, feature tour (start panel, daily, notes and hints, Killer and Samurai, collections and codes, statistics), the `#pro` Free/Pro table, the promise, **SOON** store buttons for all four listings (links in TODO comments until the listings exist), review, coffee. New screenshots `screenshots/ana-start-pro.png`, `ana-samurai.png`, `ana-killer.png` (420 x 900, Win64 2.0.0). |
+| `index.html` | Home — the **Apps No Ads apps page**: brand hero, the seven app cards (Sudoku by ANA, Sudoku Pro by ANA - with the apps' own icons and a capture each since 2026-11-06 -, LexiFlux, LexiFlux Pro, Crosswords, Crosswords | `sudoku.html` | **Product page for Sudoku by ANA and Sudoku Pro by ANA, 2.0.0** (rewritten 2026-11-06, Sudoku round 91; see *Recent changes*): hero, the moved note, free and Pro in short, the `#pro` table, the `#gallery` sections (`#themes`, `#kinds`, `#learn`, `#play`, `#your-games`, `#make-it-yours`, `#languages`, `#free`) from `screenshots/sudoku/`, the promise, `#get` (Google Play live; the App Store and the Microsoft Store coming soon - the one place to change them), `#faq`, review, coffee. The older 2.0 screenshots `screenshots/ana-*.png` are no longer used by it. |creenshots/ana-start-pro.png`, `ana-samurai.png`, `ana-killer.png` (420 x 900, Win64 2.0.0). |
 | **launch branch** | **`sudoku-2.0-launch`** (2026-11-04, from the Sudoku repo's round 80): the app's first release is everything on its `main`, as **2.0.0**. This branch is `sudoku-2.2`'s pages (every puzzle kind, collections, replay, sound, ten languages) with the version marks taken out (no "(2.2)", "since 2.2"; a replay is missing only for a game brought along from another app). **Push this branch at launch**; `sudoku-by-ana`, `sudoku-2.1` and `sudoku-2.2` are superseded by it. Not merged, not pushed. |
 | `simple-sudoku.html` | Product page for Simply Sudoku as it was (v1.9.0, + the `#pro` table); since 2026-10-31 a note at the top points to `sudoku.html`. The nav and footers on every page now link **Sudoku** → `sudoku.html` (was **Simply Sudoku** → `simple-sudoku.html`), and the home cards are *Sudoku by ANA* / *Sudoku Pro by ANA*. |
 | `lexiflux.html` | Product page for LexiFlux (+ `#pro` LexiFlux Pro) — how it plays, the physics, today's puzzle, "coming soon" store buttons. |
 | `crosswords.html` | Product page for Crosswords by Apps No Ads — generated-offline puzzles, four feature rows, promise band, SOON buttons (App Store, Microsoft Store, Linux). |
 | `afm.html` | Product page for Another File Manager (AFM) — feature cards, live screenshot, "in development / ask for an early build". |
 | `brand/` | The Apps No Ads mark and lockups, copied from `Dev\Branding\AppsNoAds` (never redraw): `mark-copper-64/128/256.png`, `lockup-wordmark.png`, `lockup-wordmark-light.png`, `tile-dark.png`. `mark-copper-64.png` is the favicon. |
-| `apps/` | App icons for the home-page cards: `simply-sudoku.png` (256, from `Sudoku\icon\sudoku_icon_1024.png`), `lexiflux.png` (192, `LexiFlux\docs\icon.png`), `crosswords.png` (256, from `CrossWordsANA\assets\icons\ios\icon_1024.png`), `afm.png` (128, from `AFM\AFileManagerV\AFMV_Icon.ico`). |
+| `apps/` | App icons for the home-page cards: `sudoku-ana.png` and `sudoku-ana-pro.png` (192, the apps' own launcher icons from the Sudoku repo's `res\android\` and `res\pro\android\`, 2026-11-06), `simply-sudoku.png` (256, from `Sudoku\icon\sudoku_icon_1024.png`), `lexiflux.png` (192, `LexiFlux\docs\icon.png`), `crosswords.png` (256, from `CrossWordsANA\assets\icons\ios\icon_1024.png`), `afm.png` (128, from `AFM\AFileManagerV\AFMV_Icon.ico`). |
 | `guide.html` | User manual — "How to play Simply Sudoku" (v1.7): the start panel, today's puzzle, custom games (Pro), entering numbers, sticky numbers, notes, hints, mistakes, check-when-ready mode, pausing &amp; continue, statistics, settings, themes/board looks, landscape (Pro), privacy, rating &amp; feedback, Free vs Pro, keyboard shortcuts. Linked in the top nav as **Guide**. |
 | `privacy.html` | Privacy Policy — **required** by Google Play and Apple. |
 | `support.html` | Support / FAQ / contact — used as the app stores' "support URL". |
 | `terms.html` | Terms of Use. |
 | `styles.css` | All styling (design system + responsive layout). |
 | `favicon` | now `brand/mark-copper-64.png` (the old `favicon.svg` Sudoku grid was removed). |
+| `screenshots/sudoku/` | **2026-11-06 (Sudoku round 91):** 91 real captures of Sudoku by ANA / Pro 2.0.0 in nine folders (`themes`, `looks`, `kinds`, `learn`, `play`, `yours`, `yours2`, `free`, `langs`), each as `<name>-s.webp` / `-l.webp` (360 / 720 px wide, 480 / 960 for a landscape one), the same as `-s.png` / `-l.png` (the `<picture>` fallback) and `<name>.webp` (full size, for the lightbox); `shots.json` lists every size and byte count. **Made, not drawn:** the Sudoku repo's `tools\site-shots.ps1` runs the app's scene mode for each one and `tools\site-shots-web.py` writes these files - run it again to re-make them all. 20.2 MB on disk; a reader loads only what scrolls into view. |
+| `lightbox.js` | The screenshot lightbox (2026-11-06): any `a.lb` opens its image in a native `<dialog>` - Escape or the close button closes it, Left / Right step through the gallery, focus goes back; nothing loaded from anywhere else. Without JavaScript the link opens the image. |
 | `screenshots/` | App screenshots used across the site. The v1.7 set (`start-panel*.png`, `daily.png`, `gameplay.png`, `sticky.png`, `hint.png`, `check-mode.png`, `settings.png`, `stats*.png`, `seeded-game.png`, `landscape.png`, `about.png`, `hard-locked.png`) are 420×900 PNG captures of the Win64 build; `board-looks.jpg`, `themes.jpg`, `look-paper.jpg` and `board-looks-grid.png` are older Android captures of the pickers (still accurate). |
 
 ## News page — two test versions (temporary, to compare & pick one)
@@ -115,6 +116,41 @@ https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605
 To change it, search-and-replace that URL across the `.html` files.
 
 ## Recent changes
+
+### 2026-11-06 — Sudoku 2.0.0: the product page rewritten, galleries of real captures (Sudoku repo round 91)
+Branch `sudoku-2.0-launch`; **not pushed** - Melvin pushes once Google approves the apps.
+- **`sudoku.html`** rewritten: hero (Pro's start page, *Get it on Google Play*); the moved note now says your games come
+  along (it said the new app "starts fresh"); *What's in the free app* / *What Pro adds*; the **Free / Pro table**
+  (26 rows, from the app repo's `docs\FREE-PRO.md`); **galleries** - themes (10) and board looks (12 + the look editor),
+  *22 ways to play* (each with its one-line rule), *Learn as you play*, *Ways to start a game*, *Your games*, *Make it
+  yours* (My Default, letters and shapes, settings, landscape, a tablet, Windows), *Ten languages*, *The free app*;
+  the promise; **store buttons**: Google Play **live** for both apps, the App Store and the Microsoft Store **coming
+  soon** as non-links (`<span class="store store-soon">`) - change them in one place, the `#get` section; FAQ (moving
+  from Simply Sudoku, free to Pro, subscription, privacy, devices). `lightbox.js` loaded with `defer`.
+- **`sudoku-guide.html`:** a picture beside each section (12, floated right on a wide screen, above the text on a phone),
+  each opening in the lightbox.
+- **`index.html`:** title and description name Sudoku by ANA; the two Sudoku cards get the apps' own icons, a capture
+  of each start page, and *Google Play* status (was *Coming to the stores*); the review band rates Sudoku by ANA and
+  Sudoku Pro by ANA on Google Play (was Simply Sudoku on Google Play and the App Store); the coffee band's Pro link goes
+  to `sudoku.html#pro`.
+- **`simple-sudoku.html`:** the note at the top now gives the three steps to bring your games along, with the Google
+  Play links; every old anchor still works.
+- **`privacy.html`:** names Sudoku by ANA and Sudoku Pro by ANA; what they keep on the device (history and replays,
+  achievements, My Default and your board looks, the free app's daily count and tries); backups made only when you
+  ask; the share sheet and print hand-offs; no permissions. **Section 5's heading and first sentence had lost their
+  words** (live on `main` too: "5." with nothing after it, "If you choose to  is processed by") - now *Buying the
+  author a coffee, and buying Pro*. Nothing about the Families policy (the apps are for 13 and over).
+- **Site-wide:** the footer's *Download* link pointed at `index.html#get`, which doesn't exist - now `sudoku.html#get`
+  (eight pages); `styles.css`: galleries, the lightbox, the guide's side pictures, the cards' capture; the comparison
+  table's checks and the *live* status green darkened to `#17733a` (4.2:1 and 3.8:1 -> 5.9:1 and 5.3:1); under
+  420 px the header shows the mark without the wordmark, so Review, Coffee and the menu fit on a 360 px phone (they
+  were cut off on every page).
+- **`_drafts/sudoku-by-ana-2-0.md`:** dated 2026-11-06, ten languages, 22 kinds, the Google Play links; still a draft.
+- **Checked:** every internal link and anchor on the five changed pages (812), every image (136: alt, width / height, the
+  file exists), tags balanced and ids unique; rendered at 360, 768 and 1440 px (headless Edge, the narrow widths inside
+  a fixed-width frame because headless Edge won't lay out narrower than about 500 px); contrast in the light page and
+  the dark bands (the site has no dark mode). No Jekyll here (no Ruby), so the site was not built; the pages are plain
+  HTML that Jekyll copies through.
 
 ### 2026-09-12 (later still) — Crosswords Pro: separate edition, no IAP
 Owner's decision: **no in-app purchases anywhere; every Pro is a separate store
