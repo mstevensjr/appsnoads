@@ -117,6 +117,12 @@ To change it, search-and-replace that URL across the `.html` files.
 
 ## Recent changes
 
+### 2026-11-07 — Sudoku: the Mac (Sudoku repo round 92)
+Branch `sudoku-2.0-launch`; not pushed. Both App Store records are for iPhone, iPad **and Mac** (Melvin, 2026-11-06):
+`sudoku.html`'s FAQ ("Android phones and tablets; iPhone, iPad and Mac; and Windows") and the `#get` lead ("The App
+Store (iPhone, iPad and Mac) and the Microsoft Store are next"); the launch draft's line the same. The App Store
+buttons stay "coming soon" until the Apple IDs exist.
+
 ### 2026-11-06 — Sudoku 2.0.0: the product page rewritten, galleries of real captures (Sudoku repo round 91)
 Branch `sudoku-2.0-launch`; **not pushed** - Melvin pushes once Google approves the apps.
 - **`sudoku.html`** rewritten: hero (Pro's start page, *Get it on Google Play*); the moved note now says your games come

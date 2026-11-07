@@ -45,6 +45,6 @@ kept a list of past games, so there is none to bring.) Moving from the free app 
 ### Get it
 - [Sudoku by ANA on Google Play](https://play.google.com/store/apps/details?id=com.appsnoads.sudoku)
 - [Sudoku Pro by ANA on Google Play](https://play.google.com/store/apps/details?id=com.appsnoads.sudoku.pro)
-- The App Store and the Microsoft Store are next.
+- The App Store (iPhone, iPad and Mac) and the Microsoft Store are next.
 
 See every screen on the [Sudoku by ANA page](/sudoku.html), or read [the user guide](/sudoku-guide.html).
