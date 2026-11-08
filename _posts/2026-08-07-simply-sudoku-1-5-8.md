@@ -25,5 +25,5 @@ exists to remove. Small fixes like these are most of what keeps an app pleasant
 over the long haul.
 
 As always: no ads, no accounts, no tracking, and it works fully offline. If you
-enjoy it, a [donation](https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605) helps cover
+enjoy it, a [donation](https://buy.stripe.com/4gM9AMfQPedP10m1bq1B607) helps cover
 the real costs.

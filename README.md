@@ -110,12 +110,53 @@ author a coffee"** (`☕ Coffee` on the top bar and in footers; `.btn-coffee`,
 support page):
 
 ```
-https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605
+https://buy.stripe.com/4gM9AMfQPedP10m1bq1B607
 ```
 
-To change it, search-and-replace that URL across the `.html` files.
+To change it, search-and-replace that URL across the `.html` files (and make a new
+`images/coffee-qr.png`).
+
+Since 2026-11-07 (Sudoku repo round 96) the link above replaced
+`https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605`, which is retired (Stripe keeps it
+active a few weeks for cached pages). Three ways in:
+- **`☕ Coffee`** (top bar, footers, the Support and Simply Sudoku pages) leads to
+  **`coffee.html`**, the one page with Stripe's buy button
+  (`buy_btn_1UZLiG6xENDPXnNCx5odQXYQ`). It is **the only page that loads
+  `js.stripe.com`**: a third-party script that may set Stripe's own cookies, said in
+  `privacy.html` section 5. The page also has the QR, the plain link for when a
+  content blocker hides the button, and a `<noscript>` link.
+- **The coffee bands' `☕ Buy the author a coffee`** is a plain link to Stripe, with
+  **`images/coffee-qr.png`** beside it (`.coffee-pay` / `.coffee-qr`, 180 CSS px,
+  `image-rendering: pixelated`, "Or scan with your phone"; hidden below 600px).
+- **The QR** is Stripe's code without its purple frame and "Scan to pay": the same
+  29 x 29 modules redrawn 1-bit, 8 px a module, a 4-module white margin (296 px,
+  436 bytes). It decodes to the link above.
 
 ## Recent changes
+
+### 2026-11-07 — The new coffee link, its QR code and Stripe's buy button (Sudoku repo round 96)
+Branch `sudoku-2.0-launch`; not pushed.
+- **The link:** `https://buy.stripe.com/dRm5kwawvd9L7oK2fu1B605` → `https://buy.stripe.com/4gM9AMfQPedP10m1bq1B607`
+  on 18 files (38 links; the old one now has no hits). In detail:
+  - 27 `☕ Coffee` buttons now lead to `coffee.html` (`/coffee.html` in `news-testing/` and `_layouts/`), in the
+    same tab.
+  - The 7 coffee bands' buttons go straight to Stripe.
+  - 4 links in the text, in the 1.5.8 news post, the Support FAQ and this README.
+- **`images/coffee-qr.png`** (new) sits beside each coffee band's button: `<div class="coffee-pay">` wraps the button
+  and a `<figure class="coffee-qr">` (180 px). The button lost its `margin-top:8px`, which moved to `.coffee-pay`.
+  `styles.css` gets `.coffee-pay`, `.coffee-qr` (hidden below 600px), `.coffee-page` and `.coffee-note`.
+- **`coffee.html`** (new) holds:
+  - Stripe's buy button;
+  - the QR code;
+  - the plain link with "If the button doesn't appear (a content blocker can hide it), use this link";
+  - a `<noscript>` link;
+  - the note "This page loads Stripe's button; Stripe's privacy policy applies to it."
+- **The bands' "Any amount, one time, via Stripe" line** was off to the left (an inline `margin:14px 0 0` overrode the
+  band's centering); now `margin:14px auto 0`, on all seven.
+- **`privacy.html`**:
+  - Section 5 gets a paragraph: the coffee page, and only that page, loads Stripe's button, which may set Stripe's own
+    cookies.
+  - Last updated: 6 → 7 November 2026.
 
 ### 2026-11-07 — Sudoku: the Mac (Sudoku repo round 92)
 Branch `sudoku-2.0-launch`; not pushed. Both App Store records are for iPhone, iPad **and Mac** (Melvin, 2026-11-06):

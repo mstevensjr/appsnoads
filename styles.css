@@ -204,6 +204,18 @@ img { max-width: 100%; display: block; }
 .coffee-band p { color: #6e4a24; max-width: 52ch; margin-left: auto; margin-right: auto; }
 .coffee-band .eyebrow { color: var(--copper-dark); }
 .coffee-cup { font-size: 2.4rem; line-height: 1; margin-bottom: .4rem; }
+/* the button with its QR code beside it (Sudoku round 96, 2026-11-07); on a phone the phone is the scanner */
+.coffee-pay { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px 32px; margin-top: 8px; }
+.coffee-qr { margin: 0; text-align: center; }
+.coffee-qr img { display: block; width: 180px; height: 180px; image-rendering: pixelated; background: #fff;
+  border: 1px solid #e6c9a8; border-radius: 12px; }
+.coffee-qr figcaption { margin-top: .45rem; font-size: .88rem; color: #6e4a24; }
+@media (max-width: 599px) { .coffee-qr { display: none; } }
+/* coffee.html - Stripe's button, the QR and the plain link */
+.coffee-page { text-align: center; }
+.coffee-page .coffee-pay { margin: 22px 0 8px; }
+.coffee-page stripe-buy-button { display: block; min-height: 40px; }
+.coffee-note { font-size: .9rem; color: var(--muted); }
 
 /* ---------- the apps (home page cards) ---------- */
 .app-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
